@@ -1,0 +1,24 @@
+zendesk.trigger reut_config_trigger@b {
+  title = "reut-config-trigger"
+  active = true
+  default = false
+  actions = [
+    {
+      field = zendesk.ticket_field.instance._eshed__test__drop_down_tagger@hihisbu
+      value = zendesk.ticket_field__custom_field_options.instance._eshed__test__drop_down_tagger___eshed_something_1@hihisbuuuuuu
+    },
+  ]
+  conditions = {
+    any = [
+      {
+        field = "requester_time_zone"
+        operator = "is_not"
+        value = "American Samoa"
+      },
+    ]
+  }
+  description = ""
+  raw_title = "reut-config-trigger"
+  category_id = zendesk.trigger_category.instance.Billing
+  _alias = "reut-config-trigger"
+}

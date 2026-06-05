@@ -30,6 +30,7 @@ zendesk.trigger_order {
         zendesk.trigger.instance.webhook_test@s,
         zendesk.trigger.instance.INCIDENT_26442_trigger@b,
         zendesk.trigger.instance.welcome_message,
+        zendesk.trigger.instance.I_am_legent@s,
       ]
       inactive = [
       ]
@@ -45,6 +46,7 @@ zendesk.trigger_order {
         zendesk.trigger.instance.bestTriggerBecauseItsOfers,
         zendesk.trigger.instance.test1,
         zendesk.trigger.instance.Received_from@s,
+        zendesk.trigger.instance.reut_config_trigger@b,
       ]
       inactive = [
       ]

@@ -33,6 +33,7 @@ zendesk.custom_role role62 {
     view_access = "full"
     voice_dashboard_access = false
     assign_agent_statuses = false
+    manage_api_credentials = false
     manage_automations = false
     manage_contextual_workspaces = false
     manage_groups = false
@@ -42,6 +43,7 @@ zendesk.custom_role role62 {
     manage_organization_fields = false
     manage_skills = false
     manage_slas = false
+    manage_support_apps = false
     manage_suspended_tickets = true
     manage_ticket_fields = false
     manage_ticket_forms = false
@@ -52,6 +54,7 @@ zendesk.custom_role role62 {
     manage_user_own_forwarding_numbers = true
     manage_user_own_photo = true
     ticket_redaction = false
+    update_api_settings = false
     update_user_own_alias = true
     update_user_own_name = true
     update_user_own_signature = true

@@ -152,6 +152,10 @@ You are a follower on this request ({{ticket.id}}). {{ticket.follower_reply_type
     contentful_eap_enabled = false
     approvals_hitl_sequential_eap_tos_accepted = false
     approvals_hitl_sequential_eap_enabled = false
+    suggested_assignees_eap_tos_accepted = false
+    suggested_assignees_eap_enabled = false
+    email_msar_eap_tos_accepted = false
+    email_msar_eap_enabled = false
   }
   groups = {
     check_group_name_uniqueness = true
@@ -174,6 +178,7 @@ You are a follower on this request ({{ticket.id}}). {{ticket.follower_reply_type
     ctm_visitor_ip_banned_migration_status = 0
     ctm_goals_migration_status = 0
     ctm_chat_routing_migration_status = 0
+    ctm_pre_chat_group_routing_status = 0
     ctm_device_metadata_migration_status = 0
     ctm_reporting_migration_status = 0
     ctm_chat_api_migration_status = 0

@@ -9,4 +9,5 @@ zendesk.oauth_client salto_test {
   global = false
   kind = "unknown"
   _alias = "salto_test"
+  enforce_token_expiration = false
 }

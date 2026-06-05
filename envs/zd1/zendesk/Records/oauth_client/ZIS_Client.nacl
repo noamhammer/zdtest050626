@@ -7,6 +7,7 @@ zendesk.oauth_client zis_zis_playground_d3v_salto2@uuub {
   global = false
   kind = "unknown"
   _alias = "ZIS Client"
+  enforce_token_expiration = true
 }
 zendesk.oauth_client zis_daniel_second_test123 {
   name = "ZIS Client"
@@ -17,6 +18,7 @@ zendesk.oauth_client zis_daniel_second_test123 {
   global = false
   kind = "unknown"
   _alias = "ZIS Client"
+  enforce_token_expiration = false
 }
 zendesk.oauth_client zis_daniel_test123123 {
   name = "ZIS Client"
@@ -27,4 +29,5 @@ zendesk.oauth_client zis_daniel_test123123 {
   global = false
   kind = "unknown"
   _alias = "ZIS Client"
+  enforce_token_expiration = false
 }

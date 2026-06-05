@@ -9,4 +9,5 @@ zendesk.oauth_client shirtest {
   global = false
   kind = "unknown"
   _alias = "shirTest"
+  enforce_token_expiration = false
 }

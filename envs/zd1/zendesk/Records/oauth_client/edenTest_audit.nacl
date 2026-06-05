@@ -6,4 +6,5 @@ zendesk.oauth_client edentest {
   global = false
   kind = "unknown"
   _alias = "edenTest-audit"
+  enforce_token_expiration = false
 }

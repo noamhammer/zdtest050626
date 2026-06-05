@@ -9,4 +9,5 @@ zendesk.oauth_client neta_test_1010 {
   global = false
   kind = "unknown"
   _alias = "neta test 1010"
+  enforce_token_expiration = false
 }

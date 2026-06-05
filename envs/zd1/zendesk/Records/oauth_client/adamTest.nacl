@@ -9,4 +9,5 @@ zendesk.oauth_client adamtest {
   global = false
   kind = "confidential"
   _alias = "adamTest"
+  enforce_token_expiration = false
 }

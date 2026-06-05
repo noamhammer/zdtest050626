@@ -34,6 +34,7 @@ zendesk.custom_role Admin {
     view_access = "full"
     voice_dashboard_access = true
     assign_agent_statuses = true
+    manage_api_credentials = true
     manage_automations = true
     manage_contextual_workspaces = true
     manage_groups = true
@@ -43,6 +44,7 @@ zendesk.custom_role Admin {
     manage_organization_fields = true
     manage_skills = true
     manage_slas = true
+    manage_support_apps = true
     manage_suspended_tickets = true
     manage_ticket_fields = true
     manage_ticket_forms = true
@@ -53,6 +55,7 @@ zendesk.custom_role Admin {
     manage_user_own_forwarding_numbers = true
     manage_user_own_photo = true
     ticket_redaction = true
+    update_api_settings = true
     update_user_own_alias = true
     update_user_own_name = true
     update_user_own_signature = true
