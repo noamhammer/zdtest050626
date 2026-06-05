@@ -1,0 +1,6 @@
+zendesk.queue_order {
+  active = [
+    zendesk.queue.instance.Adam_test1@s,
+    zendesk.queue.instance.Test_Queue_2@s,
+  ]
+}

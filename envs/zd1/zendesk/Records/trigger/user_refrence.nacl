@@ -1,0 +1,28 @@
+zendesk.trigger user_refrence {
+  title = "user_refrence"
+  active = true
+  default = false
+  actions = [
+    {
+      field = "notification_sms_user"
+      value = [
+        "lookup:ticket.ticket_field_28989710798611.custom_fields.relationfield",
+        1500002631542,
+        "yuk",
+      ]
+    },
+  ]
+  conditions = {
+    all = [
+      {
+        field = "assignee_id"
+        operator = "is"
+        value = "neta.marcus@salto.io"
+      },
+    ]
+  }
+  description = ""
+  raw_title = "user_refrence"
+  category_id = zendesk.trigger_category.instance.Other
+  _alias = "user_refrence"
+}

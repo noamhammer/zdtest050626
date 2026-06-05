@@ -1,0 +1,24 @@
+zendesk.app_installation Approve_support {
+  app_id = 976799
+  product = "support"
+  settings = {
+    name = "Approve"
+    title = "Approve"
+    configured_nav_bar = false
+  }
+  has_active_subscription = true
+  enabled = true
+  recurring_payment = true
+  collapsible = true
+  trial_days_remaining = 0
+  plan_information = {
+    name = "Default Plan"
+  }
+  paid = true
+  has_unpaid_subscription = false
+  has_incomplete_subscription = false
+  stripe_publishable_key = "pk_live_515pqTUIoNLTFNoTZSBS76HVNfIlK27qzrUnYhOb78vNqnqhtktE9s1UpymUVY6jfJ2O2Pm2bwoDfYStkeMbNfbMh00VSBhXqFv"
+  stripe_account = "acct_1IGbOTAZDoXLnkLx"
+  stripe_subscription_id = "sub_1SQTbsAZDoXLnkLxkAMnbLR1"
+  _alias = "Approve"
+}

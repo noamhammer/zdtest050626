@@ -1,0 +1,18 @@
+zendesk.ticket_form Copy_of_eden_form@s {
+  raw_name = "Copy of eden form"
+  raw_display_name = "this is a title"
+  end_user_visible = true
+  ticket_field_ids = [
+    zendesk.ticket_field.instance.Status_status,
+    zendesk.ticket_field.instance.Group_group,
+    zendesk.ticket_field.instance.Assignee_assignee,
+    zendesk.ticket_field.instance.Ticket_status_custom_status@suu,
+    zendesk.ticket_field.instance.Subject_subject,
+    zendesk.ticket_field.instance.Description_description,
+  ]
+  active = false
+  default = false
+  in_all_brands = true
+  form_type = "standard"
+  _alias = "Copy of eden form"
+}

@@ -1,0 +1,109 @@
+zendesk.view reut_test_view_1@s {
+  active = true
+  default = false
+  description = ""
+  execution = {
+    group_order = "desc"
+    sort_by = "nice_id"
+    sort_order = "desc"
+    sort = {
+      id = "ticket_id"
+      title = "ID"
+      filterable = true
+      sortable = true
+      order = "desc"
+    }
+    columns = [
+      {
+        id = "satisfaction_score"
+        title = "Satisfaction"
+        filterable = true
+        sortable = true
+      },
+      {
+        id = "subject"
+        title = "Subject"
+        filterable = true
+        sortable = true
+      },
+      {
+        id = "requester"
+        title = "Requester"
+        filterable = true
+        sortable = true
+      },
+      {
+        id = "created"
+        title = "Requested"
+        filterable = false
+        sortable = true
+      },
+      {
+        id = "assignee"
+        title = "Assignee"
+        filterable = true
+        sortable = true
+      },
+    ]
+    fields = [
+      {
+        id = "satisfaction_score"
+        title = "Satisfaction"
+        filterable = true
+        sortable = true
+      },
+      {
+        id = "subject"
+        title = "Subject"
+        filterable = true
+        sortable = true
+      },
+      {
+        id = "requester"
+        title = "Requester"
+        filterable = true
+        sortable = true
+      },
+      {
+        id = "created"
+        title = "Requested"
+        filterable = false
+        sortable = true
+      },
+      {
+        id = "assignee"
+        title = "Assignee"
+        filterable = true
+        sortable = true
+      },
+    ]
+  }
+  conditions = {
+    all = [
+      {
+        field = "status"
+        operator = "is"
+        value = "open"
+      },
+      {
+        field = "support_type"
+        operator = "is"
+        value = "0"
+      },
+      {
+        field = "current_tags"
+        operator = "includes"
+        value = [
+          zendesk.tag.instance.beta_enabled_batch7@b,
+          zendesk.tag.instance.beta_enabled_batch6@b,
+          zendesk.tag.instance.beta_enabled_batch5@b,
+          zendesk.tag.instance.beta_enabled_batch4@b,
+          zendesk.tag.instance.beta_enabled_batch3@b,
+          zendesk.tag.instance.beta_enabled_batch2@b,
+        ]
+      },
+    ]
+  }
+  raw_title = "reut test view 1"
+  _alias = "reut test view 1"
+}

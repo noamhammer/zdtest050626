@@ -1,0 +1,9 @@
+zendesk.brand_logo Eshed_Demo__Logovorschlag_Gro_kunde_png@suuu_00223v {
+  filename = "Logovorschlag_Großkunde.png"
+  contentType = "image/png"
+  content = file("zendesk/brand_logo/Eshed Demo__Logovorschlag_Großkunde.png")
+  _parent = [
+    zendesk.brand.instance.Eshed_Demo@s,
+  ]
+  _alias = "Logovorschlag_Großkunde.png"
+}

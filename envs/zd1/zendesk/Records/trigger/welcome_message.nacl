@@ -1,0 +1,30 @@
+zendesk.trigger welcome_message {
+  title = "welcome_message"
+  active = true
+  default = false
+  actions = [
+    {
+      field = "set_tags"
+      value = [
+        zendesk.tag.instance.welcome,
+      ]
+    },
+  ]
+  conditions = {
+    all = [
+      {
+        field = "update_type"
+        operator = "is"
+        value = "Create"
+      },
+      {
+        field = "status"
+        operator = "is"
+        value = "new"
+      },
+    ]
+  }
+  raw_title = "welcome_message"
+  category_id = zendesk.trigger_category.instance.Notifications
+  _alias = "welcome_message"
+}

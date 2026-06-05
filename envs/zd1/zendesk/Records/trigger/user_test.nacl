@@ -1,0 +1,26 @@
+zendesk.trigger user_test {
+  title = "user_test"
+  active = true
+  default = false
+  actions = [
+    {
+      field = "current_tags"
+      value = [
+        zendesk.tag.instance.test,
+      ]
+    },
+  ]
+  conditions = {
+    all = [
+      {
+        field = "assignee_id"
+        operator = "is"
+        value = "neta.marcus@salto.io"
+      },
+    ]
+  }
+  description = ""
+  raw_title = "user_test"
+  category_id = zendesk.trigger_category.instance.Other
+  _alias = "user_test"
+}

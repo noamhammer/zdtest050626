@@ -1,0 +1,28 @@
+zendesk.trigger Adam_lookup_test@s {
+  title = "Adam lookup test"
+  active = true
+  default = false
+  actions = [
+    {
+      field = "custom_status_id"
+      value = zendesk.custom_status.instance.pending___zd_status_pending__@u_00123_00123vu_00125_00125
+    },
+    {
+      field = "follower"
+      value = "ticket_fields_7132386826131"
+    },
+  ]
+  conditions = {
+    all = [
+      {
+        field = "cc"
+        operator = "is"
+        value = "present"
+      },
+    ]
+  }
+  description = ""
+  raw_title = "Adam lookup test"
+  category_id = zendesk.trigger_category.instance.Notifications
+  _alias = "Adam lookup test"
+}

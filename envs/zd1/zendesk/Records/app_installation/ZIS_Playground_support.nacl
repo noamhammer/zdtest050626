@@ -1,0 +1,15 @@
+zendesk.app_installation ZIS_Playground_support@su {
+  app_id = 651210
+  product = "support"
+  settings = {
+    name = "ZIS Playground"
+    title = "ZIS Playground"
+  }
+  enabled = true
+  recurring_payment = false
+  collapsible = true
+  paid = false
+  has_unpaid_subscription = false
+  has_incomplete_subscription = false
+  _alias = "ZIS Playground"
+}

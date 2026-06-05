@@ -1,0 +1,24 @@
+zendesk.app_installation Tasks_and_Subtickets_support@ssu {
+  app_id = 938289
+  product = "support"
+  settings = {
+    name = "Tasks and Subtickets"
+    title = "Tasks and Subtickets"
+    configured_nav_bar = false
+  }
+  has_active_subscription = true
+  enabled = true
+  recurring_payment = true
+  collapsible = true
+  trial_days_remaining = 0
+  plan_information = {
+    name = "Default Plan"
+  }
+  paid = true
+  has_unpaid_subscription = false
+  has_incomplete_subscription = false
+  stripe_publishable_key = "pk_live_515pqTUIoNLTFNoTZSBS76HVNfIlK27qzrUnYhOb78vNqnqhtktE9s1UpymUVY6jfJ2O2Pm2bwoDfYStkeMbNfbMh00VSBhXqFv"
+  stripe_account = "acct_1IGbOTAZDoXLnkLx"
+  stripe_subscription_id = "sub_1SQTZaAZDoXLnkLxgiw0vbCW"
+  _alias = "Tasks and Subtickets"
+}

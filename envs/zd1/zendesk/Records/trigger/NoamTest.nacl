@@ -1,0 +1,33 @@
+zendesk.trigger NoamTest {
+  title = "NoamTest"
+  active = true
+  default = false
+  actions = [
+    {
+      field = "status"
+      value = "closed"
+    },
+    {
+      field = "reply_internal"
+      value = "<p>This is a paragraph, let's see how it looks</p><p>{{ticket.requester.name}}&nbsp;</p><p><strong>Anfragender:</strong> {{ticket.ticket_field_${ zendesk.ticket_field.instance.CCE_Ticket_lookup@su }}}</p><p><strong>Vom Kunden gewähltes Hauptthema:</strong> {{ticket.ticket_field_option_title_${ zendesk.ticket_field.instance.CCE_Ticket_lookup@su }}}</p><p>{% if ticket.ticket_field_option_title_${ zendesk.ticket_field.instance.missing_16984867673235 } == \"Heizkostenabrechnung\" %}</p><p><strong>Vom Kunden gewähltes Unterthema:</strong> {{ticket.ticket_field_option_title_${ zendesk.ticket_field.instance.missing_16984867673235 }}}</p><p>{% endif %}</p>"
+    },
+  ]
+  conditions = {
+    all = [
+      {
+        field = "status"
+        operator = "is"
+        value = "pending"
+      },
+      {
+        field = "via_id"
+        operator = "is"
+        value = zendesk.channel.instance.Chat
+      },
+    ]
+  }
+  description = ""
+  raw_title = "NoamTest"
+  category_id = zendesk.trigger_category.instance.Notifications
+  _alias = "NoamTest"
+}
