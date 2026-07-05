@@ -25,13 +25,13 @@ This ticket (#{{ticket.id}}) has been reopened.
       },
       {
         field = "status"
-        operator = "value_previous"
-        value = "solved"
+        operator = "is_not"
+        value = "closed"
       },
       {
         field = "status"
-        operator = "is_not"
-        value = "closed"
+        operator = "value_previous"
+        value = "solved"
       },
     ]
   }

@@ -11,14 +11,14 @@ zendesk.trigger ticket_form_test@s {
   conditions = {
     all = [
       {
-        field = zendesk.ticket_field.instance.digest_test_text@su
-        operator = "present"
-        value = ""
-      },
-      {
         field = "group_id"
         operator = "is"
         value = zendesk.group.instance.Support
+      },
+      {
+        field = zendesk.ticket_field.instance.digest_test_text@su
+        operator = "present"
+        value = ""
       },
     ]
     any = [

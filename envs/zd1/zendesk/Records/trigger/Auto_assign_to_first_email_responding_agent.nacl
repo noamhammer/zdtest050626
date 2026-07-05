@@ -11,24 +11,14 @@ zendesk.trigger Auto_assign_to_first_email_responding_agent@bsssss {
   conditions = {
     all = [
       {
-        field = "update_type"
-        operator = "is"
-        value = "Change"
-      },
-      {
-        field = "current_via_id"
-        operator = "is"
-        value = zendesk.channel.instance.Email
-      },
-      {
         field = "assignee_id"
         operator = "is"
         value = ""
       },
       {
-        field = "role"
-        operator = "is_not"
-        value = "la+8@example.org"
+        field = "current_via_id"
+        operator = "is"
+        value = zendesk.channel.instance.Email
       },
       {
         field = "role"
@@ -39,6 +29,16 @@ zendesk.trigger Auto_assign_to_first_email_responding_agent@bsssss {
         field = "role"
         operator = "is_not"
         value = "end_user"
+      },
+      {
+        field = "role"
+        operator = "is_not"
+        value = "la+8@example.org"
+      },
+      {
+        field = "update_type"
+        operator = "is"
+        value = "Change"
       },
     ]
   }

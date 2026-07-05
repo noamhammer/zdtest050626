@@ -1,0 +1,16 @@
+zendesk.ticket_field __zd_multi_recipient_email_tickets_msar_id_ticket_field___text@_00123_00123vuuuuuuu_00125_00125u {
+  type = "text"
+  raw_title = "{{zd.multi_recipient_email_tickets_msar_id_ticket_field}}"
+  raw_description = "{{zd.multi_recipient_email_tickets_msar_id_ticket_field_description}}"
+  active = true
+  required = false
+  collapsed_for_agents = false
+  raw_title_in_portal = "{{zd.multi_recipient_email_tickets_msar_id_ticket_field}}"
+  visible_in_portal = false
+  editable_in_portal = false
+  required_in_portal = false
+  agent_can_edit = false
+  removable = true
+  key = "standard::multi_recipient_email_tickets"
+  _alias = "Multi-recipient email ID"
+}

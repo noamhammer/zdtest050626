@@ -19,14 +19,14 @@ zendesk.trigger Received_from@s {
         value = zendesk.locale.instance.en_US@b
       },
       {
-        field = "role"
-        operator = "is"
-        value = "neta.marcus@salto.io"
-      },
-      {
         field = "recipient"
         operator = "is"
         value = "audittest@salto87.zendesk.com"
+      },
+      {
+        field = "role"
+        operator = "is"
+        value = "neta.marcus@salto.io"
       },
     ]
   }

@@ -11,14 +11,14 @@ zendesk.trigger Closed_ticket_submitted_for_deletion@s {
   conditions = {
     all = [
       {
-        field = "status"
-        operator = "is"
-        value = "solved"
-      },
-      {
         field = "assignee_id"
         operator = "is"
         value = "pablo.gonzalez@salto.io"
+      },
+      {
+        field = "status"
+        operator = "is"
+        value = "solved"
       },
     ]
   }

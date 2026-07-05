@@ -78,7 +78,6 @@ zendesk.custom_role role97 {
     assign_tickets_to_any_brand = false
     manage_ip_bans = "none"
     view_audit_logs = false
-    view_access_logs = false
     execute_it_asset_management_actions = false
     capacity_rules_access = "none"
   }

@@ -15,14 +15,14 @@ zendesk.trigger Transfer_to_EMEA_Group@s {
   conditions = {
     all = [
       {
-        field = zendesk.ticket_field.instance.Region_text
-        operator = "present"
-        value = ""
-      },
-      {
         field = zendesk.ticket_field.instance.Customer_Priority_tagger@su
         operator = "is"
         value = zendesk.ticket_field__custom_field_options.instance.Customer_Priority_tagger__high@suuu
+      },
+      {
+        field = zendesk.ticket_field.instance.Region_text
+        operator = "present"
+        value = ""
       },
     ]
   }

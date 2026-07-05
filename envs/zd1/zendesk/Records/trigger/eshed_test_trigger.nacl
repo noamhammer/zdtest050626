@@ -11,14 +11,14 @@ zendesk.trigger eshed_test_trigger@b {
   conditions = {
     all = [
       {
-        field = "type"
-        operator = "is"
-        value = "incident"
-      },
-      {
         field = "number_of_incidents"
         operator = "greater_than"
         value = "2"
+      },
+      {
+        field = "type"
+        operator = "is"
+        value = "incident"
       },
     ]
   }

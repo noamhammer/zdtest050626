@@ -11,6 +11,11 @@ zendesk.trigger TransformationalTrigger {
   conditions = {
     all = [
       {
+        field = "priority"
+        operator = "less_than"
+        value = "high"
+      },
+      {
         field = "status"
         operator = "is"
         value = "new"
@@ -19,11 +24,6 @@ zendesk.trigger TransformationalTrigger {
         field = zendesk.ticket_field.instance.Is_Transformational__checkbox@sau
         operator = "is"
         value = "true"
-      },
-      {
-        field = "priority"
-        operator = "less_than"
-        value = "high"
       },
     ]
   }

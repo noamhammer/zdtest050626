@@ -14,14 +14,14 @@ zendesk.trigger notification_webhook@s {
   conditions = {
     all = [
       {
-        field = zendesk.ticket_field.instance.123456_text
-        operator = "present"
-        value = ""
-      },
-      {
         field = "role"
         operator = "is"
         value = "agent"
+      },
+      {
+        field = zendesk.ticket_field.instance.123456_text
+        operator = "present"
+        value = ""
       },
     ]
   }

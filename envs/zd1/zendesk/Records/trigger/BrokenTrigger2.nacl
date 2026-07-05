@@ -40,11 +40,6 @@ zendesk.trigger BrokenTrigger2 {
         value = zendesk.brand.instance.BrandBForGuide
       },
       {
-        field = "ticket_form_id"
-        operator = "is"
-        value = zendesk.ticket_form.instance.Default_Ticket_Form@s
-      },
-      {
         field = "group_id"
         operator = "is"
         value = zendesk.group.instance.audit_test2@s
@@ -55,6 +50,16 @@ zendesk.trigger BrokenTrigger2 {
         value = zendesk.business_hours_schedule.instance.scheduleToRemove
       },
       {
+        field = "status"
+        operator = "is_not"
+        value = "new"
+      },
+      {
+        field = "ticket_form_id"
+        operator = "is"
+        value = zendesk.ticket_form.instance.Default_Ticket_Form@s
+      },
+      {
         field = zendesk.organization_field.instance.oftoremove
         operator = "is"
         value = "123"
@@ -63,11 +68,6 @@ zendesk.trigger BrokenTrigger2 {
         field = zendesk.user_field.instance.uftoremove
         operator = "is"
         value = "789"
-      },
-      {
-        field = "status"
-        operator = "is_not"
-        value = "new"
       },
     ]
     any = [

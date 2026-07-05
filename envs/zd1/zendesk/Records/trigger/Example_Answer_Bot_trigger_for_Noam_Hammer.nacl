@@ -29,14 +29,14 @@ To add additional comments, reply to this email.
   conditions = {
     all = [
       {
-        field = "update_type"
-        operator = "is"
-        value = "Create"
-      },
-      {
         field = "requester_id"
         operator = "is"
         value = "zendesk-adapter@salto.io"
+      },
+      {
+        field = "update_type"
+        operator = "is"
+        value = "Create"
       },
     ]
   }

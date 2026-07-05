@@ -20,7 +20,7 @@ zendesk.trigger Request_customer_satisfaction_rating__social_messaging_@ssssjsk 
       {
         field = "via_id"
         operator = "is"
-        value = zendesk.channel.instance.WeChat
+        value = zendesk.channel.instance.Facebook_Messenger@s
       },
       {
         field = "via_id"
@@ -30,12 +30,12 @@ zendesk.trigger Request_customer_satisfaction_rating__social_messaging_@ssssjsk 
       {
         field = "via_id"
         operator = "is"
-        value = zendesk.channel.instance.WhatsApp
+        value = zendesk.channel.instance.WeChat
       },
       {
         field = "via_id"
         operator = "is"
-        value = zendesk.channel.instance.Facebook_Messenger@s
+        value = zendesk.channel.instance.WhatsApp
       },
       {
         field = "via_id"

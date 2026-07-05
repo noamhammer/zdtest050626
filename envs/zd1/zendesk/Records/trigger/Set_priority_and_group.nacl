@@ -15,13 +15,13 @@ zendesk.trigger Set_priority_and_group@s {
   conditions = {
     all = [
       {
+        field = "priority"
+        operator = "is"
+      },
+      {
         field = "update_type"
         operator = "is"
         value = "Create"
-      },
-      {
-        field = "priority"
-        operator = "is"
       },
     ]
   }

@@ -47,16 +47,16 @@ zendesk.trigger phone_test@s {
   conditions = {
     all = [
       {
-        field = "status"
-        operator = "is"
-        value = "new"
-      },
-      {
         field = "current_tags"
         operator = "includes"
         value = [
           zendesk.tag.instance.yo,
         ]
+      },
+      {
+        field = "status"
+        operator = "is"
+        value = "new"
       },
     ]
   }

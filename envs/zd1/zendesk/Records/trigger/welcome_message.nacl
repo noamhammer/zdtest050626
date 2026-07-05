@@ -13,14 +13,14 @@ zendesk.trigger welcome_message {
   conditions = {
     all = [
       {
-        field = "update_type"
-        operator = "is"
-        value = "Create"
-      },
-      {
         field = "status"
         operator = "is"
         value = "new"
+      },
+      {
+        field = "update_type"
+        operator = "is"
+        value = "Create"
       },
     ]
   }

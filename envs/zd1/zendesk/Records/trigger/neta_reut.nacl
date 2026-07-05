@@ -1,0 +1,24 @@
+zendesk.trigger neta_reut@s {
+  title = "neta reut"
+  active = true
+  default = false
+  actions = [
+    {
+      field = zendesk.ticket_field.instance.CCE_Ticket_lookup@su
+      value = "1462937"
+    },
+  ]
+  conditions = {
+    all = [
+      {
+        field = "lookup:ticket.ticket_field_${ zendesk.ticket_field.instance.lookup_lookup }.custom_fields.${ zendesk.custom_object_field.instance.missing_stagingtest__standard__external_id@uuuffu }"
+        operator = "present"
+        value = ""
+      },
+    ]
+  }
+  description = ""
+  raw_title = "neta reut"
+  category_id = zendesk.trigger_category.instance.KNOTS_OCR
+  _alias = "neta reut"
+}

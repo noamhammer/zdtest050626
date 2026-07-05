@@ -79,7 +79,6 @@ zendesk.custom_role Admin {
     assign_tickets_to_any_brand = true
     manage_ip_bans = "all"
     view_audit_logs = true
-    view_access_logs = true
     execute_it_asset_management_actions = true
     capacity_rules_access = "all"
     custom_objects = {

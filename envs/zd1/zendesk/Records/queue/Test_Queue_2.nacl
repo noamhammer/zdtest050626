@@ -10,6 +10,7 @@ zendesk.queue Test_Queue_2@s {
     ]
   }
   priority = 90
+  predictive_routing = false
   primary_groups_id = [
     zendesk.group.instance.Demo,
   ]

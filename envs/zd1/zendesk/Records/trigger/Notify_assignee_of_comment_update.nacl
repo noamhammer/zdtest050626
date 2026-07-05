@@ -19,11 +19,6 @@ This ticket (#{{ticket.id}}) has been updated.
   conditions = {
     all = [
       {
-        field = "comment_is_public"
-        operator = "is"
-        value = "not_relevant"
-      },
-      {
         field = "assignee_id"
         operator = "is_not"
         value = "current_user"
@@ -36,6 +31,11 @@ This ticket (#{{ticket.id}}) has been updated.
       {
         field = "assignee_id"
         operator = "not_changed"
+      },
+      {
+        field = "comment_is_public"
+        operator = "is"
+        value = "not_relevant"
       },
       {
         field = "status"

@@ -120,14 +120,16 @@ You are a follower on this request ({{ticket.id}}). {{ticket.follower_reply_type
     explore_zra_monitoring_assistant_eap_enabled = false
     it_asset_management_eap_tos_accepted = false
     it_asset_management_eap_enabled = false
-    zra_wfm_adherence_eap_tos_accepted = false
-    zra_wfm_adherence_eap_enabled = false
     iap_mcp_connections_home_eap_tos_accepted = false
     iap_mcp_connections_home_eap_enabled = false
     voice_ai_agents_eap_tos_accepted = false
     voice_ai_agents_eap_enabled = false
     hyperarc_eap_tos_accepted = false
     hyperarc_eap_enabled = false
+    hyperarc_cohort1_eap_tos_accepted = false
+    hyperarc_cohort1_eap_enabled = false
+    hyperarc_cohort2_eap_tos_accepted = false
+    hyperarc_cohort2_eap_enabled = false
     zqa_quality_score_eap_tos_accepted = false
     zqa_quality_score_eap_enabled = false
     messaging_end_user_presence_eap_tos_accepted = false
@@ -142,8 +144,6 @@ You are a follower on this request ({{ticket.id}}). {{ticket.follower_reply_type
     knowledge_copilot_eap_enabled = false
     zra_ai_agent_eap_tos_accepted = false
     zra_ai_agent_eap_enabled = false
-    cov2_parent_child_rollup_eap_tos_accepted = false
-    cov2_parent_child_rollup_eap_enabled = false
     cov2_ticket_multi_lookup_eap_tos_accepted = false
     cov2_ticket_multi_lookup_eap_enabled = false
     pdf_ingestion_eap_tos_accepted = false
@@ -156,6 +156,12 @@ You are a follower on this request ({{ticket.id}}). {{ticket.follower_reply_type
     suggested_assignees_eap_enabled = false
     email_msar_eap_tos_accepted = false
     email_msar_eap_enabled = false
+    lisbon_theme_eap_tos_accepted = false
+    lisbon_theme_eap_enabled = false
+    ai_agents_autoserve_eap_tos_accepted = false
+    ai_agents_autoserve_eap_enabled = false
+    iap_admin_copilot_action_flows_eap_tos_accepted = false
+    iap_admin_copilot_action_flows_eap_enabled = false
   }
   groups = {
     check_group_name_uniqueness = true
@@ -179,6 +185,7 @@ You are a follower on this request ({{ticket.id}}). {{ticket.follower_reply_type
     ctm_goals_migration_status = 0
     ctm_chat_routing_migration_status = 0
     ctm_pre_chat_group_routing_status = 0
+    ctm_offline_ticket_config_status = 0
     ctm_device_metadata_migration_status = 0
     ctm_reporting_migration_status = 0
     ctm_chat_api_migration_status = 0
@@ -434,6 +441,7 @@ Please choose your issue below
     enabled = false
     oauth_auth_enabled = false
   }
+  saas_management_enabled = false
   email = {
     accept_wildcard_emails = false
     custom_dkim_domain = false
@@ -477,6 +485,7 @@ Please choose your issue below
 
 {{footer}}
 '''
+    multi_recipient_email_tickets = false
   }
   automatic_answers = {
     threshold = "balanced"

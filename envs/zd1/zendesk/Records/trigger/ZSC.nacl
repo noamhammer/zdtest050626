@@ -15,6 +15,11 @@ zendesk.trigger ZSC {
   conditions = {
     all = [
       {
+        field = "status"
+        operator = "is"
+        value = "new"
+      },
+      {
         field = "ticket_form_id"
         operator = "is"
         value = zendesk.ticket_form.instance.ZSC
@@ -23,11 +28,6 @@ zendesk.trigger ZSC {
         field = zendesk.ticket_field.instance.ZSC_checkbox
         operator = "is"
         value = "false"
-      },
-      {
-        field = "status"
-        operator = "is"
-        value = "new"
       },
     ]
   }

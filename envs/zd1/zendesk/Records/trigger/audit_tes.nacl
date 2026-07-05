@@ -11,14 +11,14 @@ zendesk.trigger audit_tes@s {
   conditions = {
     all = [
       {
-        field = "status"
-        operator = "is"
-        value = "new"
-      },
-      {
         field = "brand_id"
         operator = "is"
         value = zendesk.brand.instance.anotherBrand___Eden_test@sbss
+      },
+      {
+        field = "status"
+        operator = "is"
+        value = "new"
       },
     ]
   }

@@ -53,9 +53,13 @@ zendesk.trigger michel_scott_trigger@s {
   conditions = {
     all = [
       {
-        field = "status"
+        field = "brand_id"
+        operator = "changed"
+      },
+      {
+        field = "group_id"
         operator = "is"
-        value = "new"
+        value = zendesk.group.instance.Support
       },
       {
         field = "number_of_incidents"
@@ -63,8 +67,14 @@ zendesk.trigger michel_scott_trigger@s {
         value = "1"
       },
       {
-        field = "brand_id"
-        operator = "changed"
+        field = "priority"
+        operator = "greater_than"
+        value = "high"
+      },
+      {
+        field = "status"
+        operator = "is"
+        value = "new"
       },
       {
         field = "ticket_form_id"
@@ -75,32 +85,17 @@ zendesk.trigger michel_scott_trigger@s {
         operator = "not_value"
         value = "task"
       },
-      {
-        field = "priority"
-        operator = "greater_than"
-        value = "high"
-      },
-      {
-        field = "group_id"
-        operator = "is"
-        value = zendesk.group.instance.Support
-      },
     ]
     any = [
       {
-        field = zendesk.organization_field.instance.now
+        field = "comment_includes_word"
+        operator = "not_includes"
+        value = "word1 word2 word3"
+      },
+      {
+        field = "comment_is_public"
         operator = "is"
-        value = "2022-02-06"
-      },
-      {
-        field = zendesk.organization_field.instance.age
-        operator = "is_not"
-        value = "2"
-      },
-      {
-        field = "requester_id"
-        operator = "value"
-        value = "current_user"
+        value = "requester_can_see_comment"
       },
       {
         field = "current_tags"
@@ -112,44 +107,19 @@ zendesk.trigger michel_scott_trigger@s {
         ]
       },
       {
-        field = "via_id"
-        operator = "is"
-        value = zendesk.channel.instance.Chat
-      },
-      {
         field = "current_via_id"
         operator = "is"
         value = zendesk.channel.instance.X_Corp@s
       },
       {
+        field = "lookup:ticket.ticket_field_${ zendesk.ticket_field.instance.CCE_Ticket_lookup@su }.ticket_field_13116745636627"
+        operator = "is"
+        value = "13116745635859"
+      },
+      {
         field = "recipient"
         operator = "is"
         value = "support@d3v-salto2.zendesk.com"
-      },
-      {
-        field = "update_type"
-        operator = "is"
-        value = "Change"
-      },
-      {
-        field = "subject_includes_word"
-        operator = "is"
-        value = "contain this"
-      },
-      {
-        field = "ticket_is_public"
-        operator = "is"
-        value = "public"
-      },
-      {
-        field = "comment_is_public"
-        operator = "is"
-        value = "requester_can_see_comment"
-      },
-      {
-        field = "comment_includes_word"
-        operator = "not_includes"
-        value = "word1 word2 word3"
       },
       {
         field = "reopens"
@@ -162,9 +132,9 @@ zendesk.trigger michel_scott_trigger@s {
         value = "66"
       },
       {
-        field = "ticket_due_date"
-        operator = "is"
-        value = "false"
+        field = "requester_id"
+        operator = "value"
+        value = "current_user"
       },
       {
         field = "requester_role"
@@ -177,14 +147,44 @@ zendesk.trigger michel_scott_trigger@s {
         value = "4"
       },
       {
+        field = "subject_includes_word"
+        operator = "is"
+        value = "contain this"
+      },
+      {
+        field = "ticket_due_date"
+        operator = "is"
+        value = "false"
+      },
+      {
+        field = "ticket_is_public"
+        operator = "is"
+        value = "public"
+      },
+      {
+        field = "update_type"
+        operator = "is"
+        value = "Change"
+      },
+      {
+        field = "via_id"
+        operator = "is"
+        value = zendesk.channel.instance.Chat
+      },
+      {
+        field = zendesk.organization_field.instance.age
+        operator = "is_not"
+        value = "2"
+      },
+      {
         field = zendesk.organization_field.instance.another_drop_down
         operator = "is_not"
         value = zendesk.organization_field__custom_field_options.instance.another_drop_down__option2
       },
       {
-        field = "lookup:ticket.ticket_field_${ zendesk.ticket_field.instance.CCE_Ticket_lookup@su }.ticket_field_13116745636627"
+        field = zendesk.organization_field.instance.now
         operator = "is"
-        value = "13116745635859"
+        value = "2022-02-06"
       },
     ]
   }

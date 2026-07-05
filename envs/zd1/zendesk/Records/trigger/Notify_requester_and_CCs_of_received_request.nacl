@@ -19,9 +19,14 @@ To add additional comments, reply to this email.
   conditions = {
     all = [
       {
-        field = "update_type"
+        field = "comment_is_public"
         operator = "is"
-        value = "Create"
+        value = true
+      },
+      {
+        field = "role"
+        operator = "is"
+        value = "end_user"
       },
       {
         field = "status"
@@ -34,14 +39,9 @@ To add additional comments, reply to this email.
         value = "public"
       },
       {
-        field = "comment_is_public"
+        field = "update_type"
         operator = "is"
-        value = true
-      },
-      {
-        field = "role"
-        operator = "is"
-        value = "end_user"
+        value = "Create"
       },
     ]
   }

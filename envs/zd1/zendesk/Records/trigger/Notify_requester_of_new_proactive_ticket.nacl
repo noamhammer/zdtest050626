@@ -20,14 +20,9 @@ zendesk.trigger Notify_requester_of_new_proactive_ticket@s {
   conditions = {
     all = [
       {
-        field = "update_type"
+        field = "group_id"
         operator = "is"
-        value = "Create"
-      },
-      {
-        field = "ticket_is_public"
-        operator = "is"
-        value = "public"
+        value = ""
       },
       {
         field = "role"
@@ -35,9 +30,14 @@ zendesk.trigger Notify_requester_of_new_proactive_ticket@s {
         value = "agent"
       },
       {
-        field = "group_id"
+        field = "ticket_is_public"
         operator = "is"
-        value = ""
+        value = "public"
+      },
+      {
+        field = "update_type"
+        operator = "is"
+        value = "Create"
       },
     ]
   }

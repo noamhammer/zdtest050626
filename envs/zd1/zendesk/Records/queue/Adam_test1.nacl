@@ -23,6 +23,7 @@ zendesk.queue Adam_test1@s {
     ]
   }
   priority = 2
+  predictive_routing = false
   primary_groups_id = [
     zendesk.group.instance.Test,
   ]

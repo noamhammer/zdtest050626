@@ -41,14 +41,14 @@ zendesk.trigger dcTrigger {
   conditions = {
     all = [
       {
-        field = zendesk.ticket_field.instance.123456_text
-        operator = "present"
-        value = ""
-      },
-      {
         field = "subject_includes_word"
         operator = "is"
         value = "this is dc test"
+      },
+      {
+        field = zendesk.ticket_field.instance.123456_text
+        operator = "present"
+        value = ""
       },
     ]
   }

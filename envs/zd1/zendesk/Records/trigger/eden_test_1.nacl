@@ -11,9 +11,9 @@ zendesk.trigger eden_test_1@s {
   conditions = {
     all = [
       {
-        field = "update_type"
+        field = "brand_id"
         operator = "is"
-        value = "Change"
+        value = zendesk.brand.instance.anotherBrand___Eden_test@sbss
       },
       {
         field = "ticket_form_id"
@@ -21,9 +21,9 @@ zendesk.trigger eden_test_1@s {
         value = zendesk.ticket_form.instance.eden___test@sbs
       },
       {
-        field = "brand_id"
+        field = "update_type"
         operator = "is"
-        value = zendesk.brand.instance.anotherBrand___Eden_test@sbss
+        value = "Change"
       },
     ]
   }

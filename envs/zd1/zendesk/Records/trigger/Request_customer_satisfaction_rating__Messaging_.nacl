@@ -27,6 +27,11 @@ This ticket (#{{ticket.id}}) has been reopened.
   conditions = {
     all = [
       {
+        field = "requester_id"
+        operator = "is"
+        value = "zendesk-adapter@salto.io"
+      },
+      {
         field = "status"
         operator = "value"
         value = "solved"
@@ -35,11 +40,6 @@ This ticket (#{{ticket.id}}) has been reopened.
         field = "via_id"
         operator = "is"
         value = zendesk.channel.instance.Messaging
-      },
-      {
-        field = "requester_id"
-        operator = "is"
-        value = "zendesk-adapter@salto.io"
       },
     ]
   }

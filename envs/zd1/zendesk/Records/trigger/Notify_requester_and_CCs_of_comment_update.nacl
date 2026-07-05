@@ -21,14 +21,14 @@ support engineer
   conditions = {
     all = [
       {
-        field = "update_type"
-        operator = "is"
-        value = "Change"
-      },
-      {
         field = "comment_is_public"
         operator = "is"
         value = "true"
+      },
+      {
+        field = "update_type"
+        operator = "is"
+        value = "Change"
       },
     ]
   }

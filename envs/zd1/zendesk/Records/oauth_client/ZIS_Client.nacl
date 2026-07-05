@@ -18,7 +18,7 @@ zendesk.oauth_client zis_daniel_second_test123 {
   global = false
   kind = "unknown"
   _alias = "ZIS Client"
-  enforce_token_expiration = false
+  enforce_token_expiration = true
 }
 zendesk.oauth_client zis_daniel_test123123 {
   name = "ZIS Client"
@@ -29,5 +29,5 @@ zendesk.oauth_client zis_daniel_test123123 {
   global = false
   kind = "unknown"
   _alias = "ZIS Client"
-  enforce_token_expiration = false
+  enforce_token_expiration = true
 }

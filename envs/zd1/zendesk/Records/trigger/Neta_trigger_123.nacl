@@ -13,7 +13,7 @@ zendesk.trigger Neta_trigger_123@s {
       {
         field = "update_type"
         operator = "is"
-        value = "Create"
+        value = "Change"
       },
       {
         field = zendesk.ticket_field.instance.Neta_multiselect_123_multiselect@ssu
@@ -27,6 +27,7 @@ zendesk.trigger Neta_trigger_123@s {
       },
     ]
   }
+  description = ""
   raw_title = "Neta trigger 123"
   category_id = zendesk.trigger_category.instance.Billing
   _alias = "Neta trigger 123"

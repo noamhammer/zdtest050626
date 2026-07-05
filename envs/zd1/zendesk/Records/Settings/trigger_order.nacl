@@ -127,6 +127,7 @@ zendesk.trigger_order {
     {
       category = zendesk.trigger_category.instance.KNOTS_OCR
       active = [
+        zendesk.trigger.instance.neta_reut@s,
       ]
       inactive = [
       ]

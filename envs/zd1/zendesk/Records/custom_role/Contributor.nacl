@@ -64,7 +64,7 @@ zendesk.custom_role Contributor {
     read_macro_content_suggestions = false
     view_reduced_count = false
     view_filter_tickets = true
-    export_views = true
+    export_views = false
     manage_roles = "none"
     manage_deletion_schedules = "none"
     explore_reports = {
@@ -79,7 +79,6 @@ zendesk.custom_role Contributor {
     assign_tickets_to_any_brand = false
     manage_ip_bans = "none"
     view_audit_logs = false
-    view_access_logs = false
     execute_it_asset_management_actions = false
     capacity_rules_access = "none"
     custom_objects = {

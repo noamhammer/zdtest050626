@@ -41,6 +41,11 @@ more: {{ticket.organization.name}}
   conditions = {
     all = [
       {
+        field = "organization_id"
+        operator = "is_not"
+        value = "6100636057875"
+      },
+      {
         field = "status"
         operator = "is"
         value = "new"
@@ -49,11 +54,6 @@ more: {{ticket.organization.name}}
         field = "ticket_form_id"
         operator = "is"
         value = zendesk.ticket_form.instance.Eden_Test1@s
-      },
-      {
-        field = "organization_id"
-        operator = "is_not"
-        value = "6100636057875"
       },
       {
         field = "type"
