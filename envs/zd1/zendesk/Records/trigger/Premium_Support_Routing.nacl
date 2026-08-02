@@ -1,0 +1,38 @@
+zendesk.trigger Premium_Support_Routing@s {
+  title = "Premium Support Routing"
+  active = true
+  default = false
+  actions = [
+    {
+      field = "current_tags"
+      value = [
+        zendesk.tag.instance.premium_support,
+      ]
+    },
+    {
+      field = "priority"
+      value = "high"
+    },
+    {
+      field = "group_id"
+      value = zendesk.group.instance.Support_Managers@s
+    },
+  ]
+  conditions = {
+    all = [
+      {
+        field = "ticket_form_id"
+        operator = "is"
+        value = zendesk.ticket_form.instance.Premium_Support_Request@s
+      },
+      {
+        field = "update_type"
+        operator = "is"
+        value = "Create"
+      },
+    ]
+  }
+  raw_title = "Premium Support Routing"
+  category_id = zendesk.trigger_category.instance.Premium_Support@s
+  _alias = "Premium Support Routing"
+}

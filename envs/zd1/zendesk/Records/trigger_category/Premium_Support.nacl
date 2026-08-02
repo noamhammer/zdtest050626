@@ -1,0 +1,4 @@
+zendesk.trigger_category Premium_Support@s {
+  name = "Premium Support"
+  _alias = "Premium Support"
+}

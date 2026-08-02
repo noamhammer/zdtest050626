@@ -1,0 +1,20 @@
+zendesk.ticket_field Support_Plan_tagger@su {
+  type = "tagger"
+  raw_title = "Support Plan"
+  raw_description = "The customer's contracted support plan"
+  active = true
+  required = false
+  collapsed_for_agents = false
+  raw_title_in_portal = "Support Plan"
+  visible_in_portal = true
+  editable_in_portal = true
+  required_in_portal = false
+  agent_can_edit = true
+  removable = true
+  custom_field_options = [
+    zendesk.ticket_field__custom_field_options.instance.Support_Plan_tagger__basic@suuu,
+    zendesk.ticket_field__custom_field_options.instance.Support_Plan_tagger__professional@suuu,
+    zendesk.ticket_field__custom_field_options.instance.Support_Plan_tagger__premium@suuu,
+  ]
+  _alias = "Support Plan"
+}

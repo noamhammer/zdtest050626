@@ -1,0 +1,22 @@
+zendesk.macro Premium___First_Response@sbs {
+  title = "Premium - First Response"
+  active = true
+  default = false
+  description = "Approved first response for customers on the Premium Support plan"
+  actions = [
+    {
+      field = "comment_value_html"
+      value = "<p>Hi {{ticket.requester.name}},</p><p><br></p><p>Thank you for reaching out to Premium Support. Your request has been received and assigned to a member of our Support Managers team.</p><p><br></p><p>As a Premium Support customer you are entitled to a first reply within 30 minutes for urgent requests, 1 hour for high priority requests and 4 hours for normal priority requests. We are reviewing the details now and will follow up shortly with next steps.</p><p><br></p><p>If the impact of this issue changes, reply to this email and let us know so we can re-prioritise and, if needed, engage your dedicated escalation path.</p><p><br></p><p>Best regards,</p><p>{{current_user.name}}</p><p>Premium Support</p>"
+    },
+    {
+      field = "comment_mode_is_public"
+      value = "true"
+    },
+    {
+      field = "status"
+      value = "open"
+    },
+  ]
+  raw_title = "Premium - First Response"
+  _alias = "Premium - First Response"
+}

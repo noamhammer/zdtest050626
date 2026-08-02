@@ -130,3 +130,7 @@ zendesk.tag zgy_check {
   id = "zgy_check"
   _alias = "zgy_check"
 }
+zendesk.tag premium_support {
+  id = "premium_support"
+  _alias = "premium_support"
+}
