@@ -10,5 +10,6 @@ zendesk.sla_policy_order {
     zendesk.sla_policy.instance.seroussiSideConvo,
     zendesk.sla_policy.instance.eden_test@s,
     zendesk.sla_policy.instance.new_for_audit@s,
+    zendesk.sla_policy.instance.Premium_Support_SLA@s,
   ]
 }

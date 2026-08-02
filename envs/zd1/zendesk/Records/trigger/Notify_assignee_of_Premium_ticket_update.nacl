@@ -1,0 +1,48 @@
+zendesk.trigger Notify_assignee_of_Premium_ticket_update@s {
+  title = "Notify assignee of Premium ticket update"
+  active = true
+  default = false
+  actions = [
+    {
+      field = "notification_user"
+      value = [
+        "assignee_id",
+        "[{{ticket.account}}] Premium ticket updated: {{ticket.title}}",
+        '''
+Premium Support ticket (#{{ticket.id}}) has been updated by the requester.
+
+{{ticket.comments_formatted}}
+''',
+      ]
+    },
+  ]
+  conditions = {
+    all = [
+      {
+        field = "current_tags"
+        operator = "includes"
+        value = [
+          zendesk.tag.instance.premium_support,
+        ]
+      },
+      {
+        field = "update_type"
+        operator = "is"
+        value = "Change"
+      },
+      {
+        field = "requester_id"
+        operator = "is"
+        value = "current_user"
+      },
+      {
+        field = "assignee_id"
+        operator = "is_not"
+        value = "current_user"
+      },
+    ]
+  }
+  raw_title = "Notify assignee of Premium ticket update"
+  category_id = zendesk.trigger_category.instance.Premium_Support@s
+  _alias = "Notify assignee of Premium ticket update"
+}

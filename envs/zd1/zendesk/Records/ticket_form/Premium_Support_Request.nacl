@@ -1,0 +1,21 @@
+zendesk.ticket_form Premium_Support_Request@s {
+  raw_name = "Premium Support Request"
+  raw_display_name = "Premium Support Request"
+  end_user_visible = true
+  ticket_field_ids = [
+    zendesk.ticket_field.instance.Status_status,
+    zendesk.ticket_field.instance.Group_group,
+    zendesk.ticket_field.instance.Assignee_assignee,
+    zendesk.ticket_field.instance.Subject_subject,
+    zendesk.ticket_field.instance.Description_description,
+    zendesk.ticket_field.instance.Type_tickettype,
+    zendesk.ticket_field.instance.Priority_priority,
+    zendesk.ticket_field.instance.Support_Plan_tagger@su,
+    zendesk.ticket_field.instance.Account_ID_text@su,
+  ]
+  active = true
+  default = false
+  in_all_brands = true
+  form_type = "standard"
+  _alias = "Premium Support Request"
+}

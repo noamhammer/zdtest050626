@@ -141,5 +141,14 @@ zendesk.trigger_order {
       inactive = [
       ]
     },
+    {
+      category = zendesk.trigger_category.instance.Premium_Support@s
+      active = [
+        zendesk.trigger.instance.Premium_Support_Routing@s,
+        zendesk.trigger.instance.Notify_assignee_of_Premium_ticket_update@s,
+      ]
+      inactive = [
+      ]
+    },
   ]
 }
