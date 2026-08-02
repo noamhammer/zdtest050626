@@ -74,10 +74,6 @@ zendesk.tag overdue {
   id = "overdue"
   _alias = "overdue"
 }
-zendesk.tag premium_support {
-  id = "premium_support"
-  _alias = "premium_support"
-}
 zendesk.tag review_delete {
   id = "review_delete"
   _alias = "review_delete"
@@ -133,4 +129,8 @@ zendesk.tag zgy {
 zendesk.tag zgy_check {
   id = "zgy_check"
   _alias = "zgy_check"
+}
+zendesk.tag premium_support {
+  id = "premium_support"
+  _alias = "premium_support"
 }
