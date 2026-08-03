@@ -1,0 +1,36 @@
+zendesk.trigger Prioritize_Premium_Support_requests@s {
+  title = "Prioritize Premium Support requests"
+  active = true
+  default = false
+  description = "Raise Premium Support Request tickets to High priority. Tickets already submitted as Urgent are left untouched."
+  actions = [
+    {
+      field = "priority"
+      value = "high"
+    },
+  ]
+  conditions = {
+    all = [
+      {
+        field = "update_type"
+        operator = "is"
+        value = "Create"
+      },
+      {
+        field = "ticket_form_id"
+        operator = "is"
+        value = zendesk.ticket_form.instance.Premium_Support_Request@s
+      },
+      {
+        field = "priority"
+        operator = "less_than"
+        value = "high"
+      },
+    ]
+    any = [
+    ]
+  }
+  raw_title = "Prioritize Premium Support requests"
+  category_id = zendesk.trigger_category.instance.Premium_Support@s
+  _alias = "Prioritize Premium Support requests"
+}

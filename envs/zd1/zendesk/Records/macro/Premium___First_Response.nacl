@@ -1,0 +1,22 @@
+zendesk.macro Premium___First_Response@s_08212ss {
+  title = "Premium — First Response"
+  active = true
+  default = false
+  description = "Approved first-response greeting for Premium Support plan customers."
+  actions = [
+    {
+      field = "comment_mode_is_public"
+      value = "true"
+    },
+    {
+      field = "comment_value_html"
+      value = "<p>Hi {{ticket.requester.first_name}},</p><p><br></p><p>Thank you for contacting Salto Support. As a Premium Support customer, your request has been routed to our Premium Support team and is being handled under your Premium Support SLA.</p><p><br></p><p>I am reviewing the details now and will follow up with an update shortly. If anything changes on your side in the meantime, just reply to this ticket and I will be notified straight away.</p><p><br></p><p>Best regards,</p><p>{{current_user.name}}</p><p>Salto Premium Support</p>"
+    },
+    {
+      field = "status"
+      value = "open"
+    },
+  ]
+  raw_title = "Premium — First Response"
+  _alias = "Premium — First Response"
+}

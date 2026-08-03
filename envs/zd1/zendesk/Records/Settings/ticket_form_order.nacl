@@ -59,6 +59,7 @@ zendesk.ticket_form_order {
     zendesk.ticket_form.instance.tf_2@zb,
     zendesk.ticket_form.instance.INCIDENT_28353@b,
     zendesk.ticket_form.instance.Free,
+    zendesk.ticket_form.instance.Premium_Support_Request@s,
   ]
   inactive = [
     zendesk.ticket_form.instance.Adam_test@s,
