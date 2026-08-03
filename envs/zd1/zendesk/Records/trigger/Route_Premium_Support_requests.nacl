@@ -28,7 +28,8 @@ zendesk.trigger Route_Premium_Support_requests@s {
         value = zendesk.ticket_form.instance.Premium_Support_Request@s
       },
     ]
-    any = []
+    any = [
+    ]
   }
   raw_title = "Route Premium Support requests"
   category_id = zendesk.trigger_category.instance.Premium_Support@s

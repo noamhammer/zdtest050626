@@ -2,7 +2,8 @@ zendesk.sla_policy Premium_Support_SLA@s {
   title = "Premium Support SLA"
   description = "First reply targets for customers on the Premium Support plan."
   filter = {
-    all = []
+    all = [
+    ]
     any = [
       {
         field = "ticket_form_id"

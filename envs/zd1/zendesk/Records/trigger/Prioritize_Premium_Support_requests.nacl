@@ -27,7 +27,8 @@ zendesk.trigger Prioritize_Premium_Support_requests@s {
         value = "high"
       },
     ]
-    any = []
+    any = [
+    ]
   }
   raw_title = "Prioritize Premium Support requests"
   category_id = zendesk.trigger_category.instance.Premium_Support@s

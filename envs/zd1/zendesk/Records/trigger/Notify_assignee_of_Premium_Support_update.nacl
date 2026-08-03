@@ -37,7 +37,8 @@ The requester has updated this Premium Support ticket (#{{ticket.id}}).
         value = "end_user"
       },
     ]
-    any = []
+    any = [
+    ]
   }
   raw_title = "Notify assignee of Premium Support update"
   category_id = zendesk.trigger_category.instance.Premium_Support@s
