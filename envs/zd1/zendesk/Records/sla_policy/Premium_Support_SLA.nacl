@@ -1,0 +1,45 @@
+zendesk.sla_policy Premium_Support_SLA@s {
+  title = "Premium Support SLA"
+  description = "First reply targets for customers on the Premium Support plan."
+  filter = {
+    all = []
+    any = [
+      {
+        field = "ticket_form_id"
+        operator = "is"
+        value = zendesk.ticket_form.instance.Premium_Support_Request@s
+      },
+      {
+        field = "current_tags"
+        operator = "includes"
+        value = [
+          "premium_support",
+        ]
+      },
+    ]
+  }
+  policy_metrics = [
+    {
+      priority = "normal"
+      metric = "first_reply_time"
+      target = 240
+      business_hours = false
+      target_in_seconds = 14400
+    },
+    {
+      priority = "high"
+      metric = "first_reply_time"
+      target = 60
+      business_hours = false
+      target_in_seconds = 3600
+    },
+    {
+      priority = "urgent"
+      metric = "first_reply_time"
+      target = 30
+      business_hours = false
+      target_in_seconds = 1800
+    },
+  ]
+  _alias = "Premium Support SLA"
+}

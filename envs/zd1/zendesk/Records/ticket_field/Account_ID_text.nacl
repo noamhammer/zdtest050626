@@ -1,0 +1,15 @@
+zendesk.ticket_field Account_ID_text@su {
+  type = "text"
+  raw_title = "Account ID"
+  raw_description = "Your account identifier, used to verify support entitlement."
+  active = true
+  required = false
+  collapsed_for_agents = false
+  raw_title_in_portal = "Account ID"
+  visible_in_portal = true
+  editable_in_portal = true
+  required_in_portal = false
+  agent_can_edit = true
+  removable = true
+  _alias = "Account ID"
+}

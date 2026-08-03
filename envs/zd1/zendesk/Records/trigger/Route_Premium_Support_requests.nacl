@@ -1,0 +1,36 @@
+zendesk.trigger Route_Premium_Support_requests@s {
+  title = "Route Premium Support requests"
+  active = true
+  default = false
+  description = "Tag tickets submitted through the Premium Support Request form and assign them to the Support Managers group."
+  actions = [
+    {
+      field = "current_tags"
+      value = [
+        "premium_support",
+      ]
+    },
+    {
+      field = "group_id"
+      value = zendesk.group.instance.Support_Managers@s
+    },
+  ]
+  conditions = {
+    all = [
+      {
+        field = "update_type"
+        operator = "is"
+        value = "Create"
+      },
+      {
+        field = "ticket_form_id"
+        operator = "is"
+        value = zendesk.ticket_form.instance.Premium_Support_Request@s
+      },
+    ]
+    any = []
+  }
+  raw_title = "Route Premium Support requests"
+  category_id = zendesk.trigger_category.instance.Premium_Support@s
+  _alias = "Route Premium Support requests"
+}
