@@ -1,0 +1,23 @@
+zendesk.ticket_field HA___customer_health_status_tagger@sbsssu {
+  type = "tagger"
+  raw_title = "HA - customer health status"
+  raw_description = ""
+  active = true
+  required = false
+  collapsed_for_agents = false
+  raw_title_in_portal = "HA - customer health status"
+  visible_in_portal = false
+  editable_in_portal = false
+  required_in_portal = false
+  agent_can_edit = true
+  removable = true
+  agent_description = "customer health status"
+  raw_agent_description = "customer health status"
+  custom_field_options = [
+    zendesk.ticket_field__custom_field_options.instance.HA___customer_health_status_tagger__critical@sbsssuuu,
+    zendesk.ticket_field__custom_field_options.instance.HA___customer_health_status_tagger__risk@sbsssuuu,
+    zendesk.ticket_field__custom_field_options.instance.HA___customer_health_status_tagger__healthy@sbsssuuu,
+  ]
+  default_custom_field_option = zendesk.ticket_field__custom_field_options.instance.HA___customer_health_status_tagger__critical@sbsssuuu
+  _alias = "HA - customer health status"
+}

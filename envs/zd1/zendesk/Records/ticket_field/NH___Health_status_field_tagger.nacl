@@ -1,0 +1,23 @@
+zendesk.ticket_field NH___Health_status_field_tagger@sbsssu {
+  type = "tagger"
+  raw_title = "NH - Health status field"
+  raw_description = ""
+  active = true
+  required = false
+  collapsed_for_agents = false
+  raw_title_in_portal = "NH - Health status field"
+  visible_in_portal = false
+  editable_in_portal = false
+  required_in_portal = false
+  agent_can_edit = true
+  removable = true
+  agent_description = "A drop-down field"
+  raw_agent_description = "A drop-down field"
+  custom_field_options = [
+    zendesk.ticket_field__custom_field_options.instance.NH___Health_status_field_tagger__red@sbsssuuu,
+    zendesk.ticket_field__custom_field_options.instance.NH___Health_status_field_tagger__yellow@sbsssuuu,
+    zendesk.ticket_field__custom_field_options.instance.NH___Health_status_field_tagger__green@sbsssuuu,
+  ]
+  default_custom_field_option = zendesk.ticket_field__custom_field_options.instance.NH___Health_status_field_tagger__red@sbsssuuu
+  _alias = "NH - Health status field"
+}

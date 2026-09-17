@@ -6,7 +6,7 @@ zendesk.macro blika_blook {
   actions = [
     {
       field = "comment_value_html"
-      value = "<p>blika_blook kakakak</p>"
+      value = "<p>blika_blook kakakak updated</p>"
     },
   ]
   attachments = [

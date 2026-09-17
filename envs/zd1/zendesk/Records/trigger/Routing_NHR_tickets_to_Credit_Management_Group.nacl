@@ -1,0 +1,24 @@
+zendesk.trigger Routing_NHR_tickets_to_Credit_Management_Group@s {
+  title = "Routing NHR tickets to Credit Management Group"
+  active = true
+  default = false
+  actions = [
+    {
+      field = zendesk.ticket_field.instance.CCE_Ticket_lookup@su
+      value = "1462931"
+    },
+  ]
+  conditions = {
+    all = [
+      {
+        field = zendesk.ticket_field.instance._eshed__Categories_of_Newsletter_multiselect@hisssu
+        operator = "includes"
+        value = zendesk.ticket_field__custom_field_options.instance._eshed__Categories_of_Newsletter_multiselect__fruit___vegetable@hisssuuuuuu
+      },
+    ]
+  }
+  description = "bla blab bla"
+  raw_title = "Routing NHR tickets to Credit Management Group"
+  category_id = zendesk.trigger_category.instance.Notifications
+  _alias = "Routing NHR tickets to Credit Management Group"
+}

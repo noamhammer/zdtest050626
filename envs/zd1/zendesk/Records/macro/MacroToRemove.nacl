@@ -2,10 +2,11 @@ zendesk.macro MacroToRemove {
   title = "MacroToRemove"
   active = true
   default = false
+  description = "Not yet - 6"
   actions = [
     {
       field = "subject"
-      value = "abv"
+      value = "abvq"
     },
     {
       field = zendesk.ticket_field.instance.tagger12_tagger

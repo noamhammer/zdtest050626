@@ -1,0 +1,33 @@
+zendesk.messaging_trigger All_Agents_Offline@s {
+  name = "All Agents Offline"
+  description = "All agents are offline, They will get back to you when available"
+  definition = {
+    event = "conversation_started"
+    actions = [
+      [
+        "sendMessageToCustomer",
+        "Automated Response",
+        "Hi there! Thanks for reaching out to us. We're offline right now, but we'll respond to your message when we're back online in a few hours.",
+      ],
+    ]
+    condition = [
+      "and",
+      [
+        "eq",
+        "@customer_requesting_conversation",
+        true,
+      ],
+      [
+        "eq",
+        "@account_status",
+        "invisible",
+      ],
+    ]
+  }
+  active = false
+  channels = [
+    zendesk.channel.instance.Messaging,
+  ]
+  fire_once = false
+  _alias = "All Agents Offline"
+}

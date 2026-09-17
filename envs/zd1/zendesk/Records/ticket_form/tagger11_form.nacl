@@ -11,7 +11,7 @@ zendesk.ticket_form tagger11_form@s {
     zendesk.ticket_field.instance.Description_description,
   ]
   active = true
-  default = true
+  default = false
   in_all_brands = true
   form_type = "standard"
   _alias = "tagger11 form"

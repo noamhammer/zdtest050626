@@ -49,13 +49,13 @@ zendesk.custom_role Admin {
     manage_ticket_fields = true
     manage_ticket_forms = true
     manage_ticket_settings = true
+    manage_end_user_settings = true
     manage_triggers = true
     manage_user_fields = true
     manage_user_own_contacts = true
     manage_user_own_forwarding_numbers = true
     manage_user_own_photo = true
     ticket_redaction = true
-    update_api_settings = true
     update_user_own_alias = true
     update_user_own_name = true
     update_user_own_signature = true
@@ -63,10 +63,12 @@ zendesk.custom_role Admin {
     modify_closed_tickets = true
     read_macro_content_suggestions = true
     view_reduced_count = false
+    use_conversational_assistance = true
     view_filter_tickets = true
     export_views = true
     manage_roles = "all"
     manage_deletion_schedules = "all"
+    manage_brands = "all"
     explore_reports = {
       ticket_access = "all"
       groups_ticket_access = "all"
@@ -79,6 +81,7 @@ zendesk.custom_role Admin {
     assign_tickets_to_any_brand = true
     manage_ip_bans = "all"
     view_audit_logs = true
+    delete_brands = true
     execute_it_asset_management_actions = true
     capacity_rules_access = "all"
     custom_objects = {

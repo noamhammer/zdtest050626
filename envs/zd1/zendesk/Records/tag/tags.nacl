@@ -130,3 +130,7 @@ zendesk.tag zgy_check {
   id = "zgy_check"
   _alias = "zgy_check"
 }
+zendesk.tag email_risk {
+  id = "email_risk"
+  _alias = "email_risk"
+}

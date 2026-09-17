@@ -47,6 +47,7 @@ zendesk.account_setting {
     ticket_followers_allowed = true
     ticket_auto_tagging = true
     end_user_attachments = true
+    audio_recorder_enabled = true
     copy_original_assignee_and_group_to_followup = false
     ccs_requester_excluded_public_comments = false
     bcc_archive_address = ""
@@ -91,12 +92,14 @@ You are a follower on this request ({{ticket.id}}). {{ticket.follower_reply_type
     messaging_enabled = true
     ccs_followers_rules_update_required = true
     ccs_followers_no_rollback = true
+    email_ccs_addable_only_by_agents_via_email = false
     sunco_private_attachments_enabled = false
     only_allowed_attachment_file_types = "all"
     only_allowed_attachment_file_types_agreement = "unset"
     attachment_public_expiration = false
     attachment_public_duration = 24
     private_end_user_attachments = false
+    email_redact_attachments_when_placeholders_disallow = false
   }
   agents = {
     agent_workspace = true
@@ -114,6 +117,7 @@ You are a follower on this request ({{ticket.id}}). {{ticket.follower_reply_type
     unified_navigation_terms_and_conditions_accepted = false
     ai_async_comment_translations_eap_enabled = false
     ai_translation_disclosure_enabled = false
+    explore_zra_monitoring_assistant_enabled = true
     example_eap_tos_accepted = false
     example_eap_enabled = false
     explore_zra_monitoring_assistant_eap_tos_accepted = false
@@ -144,24 +148,36 @@ You are a follower on this request ({{ticket.id}}). {{ticket.follower_reply_type
     knowledge_copilot_eap_enabled = false
     zra_ai_agent_eap_tos_accepted = false
     zra_ai_agent_eap_enabled = false
-    cov2_ticket_multi_lookup_eap_tos_accepted = false
-    cov2_ticket_multi_lookup_eap_enabled = false
     pdf_ingestion_eap_tos_accepted = false
     pdf_ingestion_eap_enabled = false
     contentful_eap_tos_accepted = false
     contentful_eap_enabled = false
     approvals_hitl_sequential_eap_tos_accepted = false
     approvals_hitl_sequential_eap_enabled = false
+    split_view_eap_tos_accepted = false
+    split_view_eap_enabled = false
     suggested_assignees_eap_tos_accepted = false
     suggested_assignees_eap_enabled = false
-    email_msar_eap_tos_accepted = false
-    email_msar_eap_enabled = false
     lisbon_theme_eap_tos_accepted = false
     lisbon_theme_eap_enabled = false
     ai_agents_autoserve_eap_tos_accepted = false
     ai_agents_autoserve_eap_enabled = false
     iap_admin_copilot_action_flows_eap_tos_accepted = false
     iap_admin_copilot_action_flows_eap_enabled = false
+    apps_mtls_eap_tos_accepted = false
+    apps_mtls_eap_enabled = false
+    advanced_action_flows_eap_tos_accepted = false
+    advanced_action_flows_eap_enabled = false
+    headless_platform_mcp_eap_tos_accepted = false
+    headless_platform_mcp_eap_enabled = false
+    ai_agents_conversation_simulator_eap_tos_accepted = false
+    ai_agents_conversation_simulator_eap_enabled = false
+    bi_directional_slack_eap_tos_accepted = false
+    bi_directional_slack_eap_enabled = false
+    contact_center_realtime_translation_eap_tos_accepted = false
+    contact_center_realtime_translation_eap_enabled = false
+    es_change_management_eap_tos_accepted = false
+    es_change_management_eap_enabled = false
   }
   groups = {
     check_group_name_uniqueness = true
@@ -229,13 +245,13 @@ You are a follower on this request ({{ticket.id}}). {{ticket.follower_reply_type
     agent_created_welcome_emails = false
     end_user_phone_number_validation = false
     have_gravatars_enabled = true
+    shared_email_creation_enabled = false
   }
   screencast = {
     enabled_for_tickets = false
   }
   lotus = {
     prefer_lotus = true
-    reporting = true
     pod_id = 19
   }
   statistics = {
@@ -334,6 +350,10 @@ Please choose your issue below
   }
   limits = {
     attachment_size = 52428800
+    multi_lookup_fields = 2
+    max_users_per_shared_identity = {
+      email = 100
+    }
   }
   onboarding = {
     checklist_onboarding_version = 6
@@ -403,6 +423,11 @@ Please choose your issue below
     ticket_sorting_prioritize_sla = false
     transform_to_email_enabled = false
   }
+  realtime_insights = {
+    enabled = false
+    anomaly_detection = false
+    trending_topics_summary = false
+  }
   deletion = {
     user_auto_delete_soft_deleted_retention = 30
     user_auto_delete_max_deletions_per_hour = 1000
@@ -442,6 +467,14 @@ Please choose your issue below
     oauth_auth_enabled = false
   }
   saas_management_enabled = false
+  has_org_hierarchy = false
+  org_hierarchy_enabled = false
+  surveys = {
+    theming_integration_enabled = false
+  }
+  qa = {
+    quality_score_opted_out = false
+  }
   email = {
     accept_wildcard_emails = false
     custom_dkim_domain = false
@@ -451,6 +484,7 @@ Please choose your issue below
     email_template_photos = true
     email_template_selection = false
     gmail_actions = true
+    gmail_fallback_enabled = true
     html_mail_template = '''
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
@@ -486,6 +520,7 @@ Please choose your issue below
 {{footer}}
 '''
     multi_recipient_email_tickets = false
+    email_voice_ai_agent_comments = true
   }
   automatic_answers = {
     threshold = "balanced"
@@ -499,5 +534,8 @@ Please choose your issue below
   }
   approvals = {
     slack_workspace = ""
+  }
+  notifications = {
+    notifications_preference_admin_setting = false
   }
 }

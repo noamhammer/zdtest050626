@@ -1,0 +1,37 @@
+zendesk.messaging_trigger First_Reply@s {
+  name = "First Reply"
+  description = "Send an automated reply to customers that start a conversation, so they know their request is being attended to."
+  definition = {
+    event = "conversation_started"
+    actions = [
+      [
+        "wait",
+        5,
+      ],
+      [
+        "sendMessageToCustomer",
+        "Customer Service",
+        "Thanks for your message, please wait a moment while our agents attend to you.",
+      ],
+    ]
+    condition = [
+      "and",
+      [
+        "eq",
+        "@customer_requesting_conversation",
+        true,
+      ],
+      [
+        "eq",
+        "@customer_served",
+        false,
+      ],
+    ]
+  }
+  active = false
+  channels = [
+    zendesk.channel.instance.Messaging,
+  ]
+  fire_once = false
+  _alias = "First Reply"
+}

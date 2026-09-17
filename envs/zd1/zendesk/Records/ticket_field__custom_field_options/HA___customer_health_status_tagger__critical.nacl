@@ -1,0 +1,9 @@
+zendesk.ticket_field__custom_field_options HA___customer_health_status_tagger__critical@sbsssuuu {
+  raw_name = "critical"
+  value = "critical"
+  allow_solving = true
+  _parent = [
+    zendesk.ticket_field.instance.HA___customer_health_status_tagger@sbsssu,
+  ]
+  _alias = "critical"
+}

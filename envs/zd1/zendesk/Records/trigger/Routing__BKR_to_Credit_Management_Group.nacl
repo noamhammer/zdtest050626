@@ -1,0 +1,24 @@
+zendesk.trigger Routing__BKR_to_Credit_Management_Group@s {
+  title = "Routing  BKR to Credit Management Group"
+  active = true
+  default = false
+  actions = [
+    {
+      field = zendesk.organization_field.instance.age
+      value = "1"
+    },
+  ]
+  conditions = {
+    all = [
+      {
+        field = zendesk.ticket_field.instance._eshed__Categories_of_Newsletter_multiselect@hisssu
+        operator = "includes"
+        value = zendesk.ticket_field__custom_field_options.instance._eshed__Categories_of_Newsletter_multiselect__fruit___vegetable@hisssuuuuuu
+      },
+    ]
+  }
+  description = "bl abads"
+  raw_title = "Routing  BKR to Credit Management Group"
+  category_id = zendesk.trigger_category.instance.Notifications
+  _alias = "Routing  BKR to Credit Management Group"
+}

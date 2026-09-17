@@ -1,0 +1,4 @@
+zendesk.channel X_Chat_DM@s {
+  name = "X Chat DM"
+  _alias = "X Chat DM"
+}

@@ -49,13 +49,13 @@ zendesk.custom_role Light_agent2@s {
     manage_ticket_fields = false
     manage_ticket_forms = false
     manage_ticket_settings = false
+    manage_end_user_settings = false
     manage_triggers = false
     manage_user_fields = false
     manage_user_own_contacts = true
     manage_user_own_forwarding_numbers = true
     manage_user_own_photo = true
     ticket_redaction = false
-    update_api_settings = false
     update_user_own_alias = true
     update_user_own_name = true
     update_user_own_signature = true
@@ -63,10 +63,12 @@ zendesk.custom_role Light_agent2@s {
     modify_closed_tickets = false
     read_macro_content_suggestions = false
     view_reduced_count = false
+    use_conversational_assistance = false
     view_filter_tickets = true
     export_views = true
     manage_roles = "none"
     manage_deletion_schedules = "none"
+    manage_brands = "none"
     explore_reports = {
       ticket_access = "all"
       groups_ticket_access = "all"
@@ -79,6 +81,7 @@ zendesk.custom_role Light_agent2@s {
     assign_tickets_to_any_brand = false
     manage_ip_bans = "none"
     view_audit_logs = false
+    delete_brands = false
     execute_it_asset_management_actions = false
     capacity_rules_access = "none"
   }

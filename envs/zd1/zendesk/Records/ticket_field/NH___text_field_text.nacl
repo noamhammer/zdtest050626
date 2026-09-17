@@ -1,0 +1,17 @@
+zendesk.ticket_field NH___text_field_text@sbssu {
+  type = "text"
+  raw_title = "NH - text field"
+  raw_description = ""
+  active = true
+  required = false
+  collapsed_for_agents = false
+  raw_title_in_portal = "NH - text field"
+  visible_in_portal = false
+  editable_in_portal = false
+  required_in_portal = false
+  agent_can_edit = true
+  removable = true
+  agent_description = "Regular text field"
+  raw_agent_description = "Regular text field"
+  _alias = "NH - text field"
+}

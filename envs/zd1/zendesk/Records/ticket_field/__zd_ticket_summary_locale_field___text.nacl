@@ -1,0 +1,16 @@
+zendesk.ticket_field __zd_ticket_summary_locale_field___text@_00123_00123vuuu_00125_00125u {
+  type = "text"
+  raw_title = "{{zd.ticket_summary_locale_field}}"
+  raw_description = "{{zd.ticket_summary_locale_description}}"
+  active = true
+  required = false
+  collapsed_for_agents = false
+  raw_title_in_portal = "{{zd.ticket_summary_locale_field}}"
+  visible_in_portal = false
+  editable_in_portal = false
+  required_in_portal = false
+  agent_can_edit = false
+  removable = true
+  key = "standard::ticket_summary_locale"
+  _alias = "Summary locale"
+}

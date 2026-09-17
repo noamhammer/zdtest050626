@@ -1,0 +1,27 @@
+zendesk.messaging_trigger Adam_messaging_trigger_test@s {
+  name = "Adam messaging trigger test"
+  description = "Will it trigger?"
+  definition = {
+    event = "conversation_started"
+    actions = [
+      [
+        "wait",
+        222,
+      ],
+    ]
+    condition = [
+      "or",
+      [
+        "eq",
+        "@customer_name",
+        "Yossi",
+      ],
+    ]
+  }
+  active = false
+  channels = [
+    zendesk.channel.instance.Messaging,
+  ]
+  fire_once = false
+  _alias = "Adam messaging trigger test"
+}

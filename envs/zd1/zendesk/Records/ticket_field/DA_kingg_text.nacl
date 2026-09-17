@@ -1,15 +1,15 @@
 zendesk.ticket_field DA_kingg_text@su {
   type = "text"
-  raw_title = "DA kingg"
-  raw_description = "Lawrence Lin"
+  raw_title = "DA King"
+  raw_description = ""
   active = true
   required = false
   collapsed_for_agents = false
-  raw_title_in_portal = "DA kingg"
+  raw_title_in_portal = "DA King"
   visible_in_portal = false
   editable_in_portal = false
   required_in_portal = false
   agent_can_edit = true
   removable = true
-  _alias = "DA kingg"
+  _alias = "DA King"
 }

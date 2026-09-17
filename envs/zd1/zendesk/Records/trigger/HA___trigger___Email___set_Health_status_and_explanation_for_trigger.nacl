@@ -1,0 +1,35 @@
+zendesk.trigger HA___trigger___Email___set_Health_status_and_explanation_for_trigger@sbssbssbsssssss {
+  title = "HA - trigger - Email - set Health status and explanation for trigger"
+  active = true
+  default = false
+  actions = [
+    {
+      field = zendesk.ticket_field.instance.HA___customer_health_status_tagger@sbsssu
+      value = zendesk.ticket_field__custom_field_options.instance.HA___customer_health_status_tagger__risk@sbsssuuu
+    },
+    {
+      field = "current_tags"
+      value = [
+        zendesk.tag.instance.email_risk,
+      ]
+    },
+  ]
+  conditions = {
+    all = [
+      {
+        field = "current_via_id"
+        operator = "is"
+        value = zendesk.channel.instance.Email
+      },
+      {
+        field = "custom_status_id"
+        operator = "is"
+        value = zendesk.custom_status.instance.new___zd_status_new__@u_00123_00123vu_00125_00125
+      },
+    ]
+  }
+  description = "Set Health status and explanation for trigger"
+  raw_title = "HA - trigger - Email - set Health status and explanation for trigger"
+  category_id = zendesk.trigger_category.instance.Notifications
+  _alias = "HA - trigger - Email - set Health status and explanation for trigger"
+}

@@ -2,10 +2,11 @@ zendesk.macro renameMe {
   title = "renameMe"
   active = true
   default = false
+  description = "Updated"
   actions = [
     {
       field = "status"
-      value = "pending"
+      value = "hold"
     },
   ]
   raw_title = "renameMe"

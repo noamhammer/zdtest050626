@@ -22,7 +22,7 @@ zendesk.trigger NoamTest {
       {
         field = "via_id"
         operator = "is"
-        value = zendesk.channel.instance.Chat
+        value = zendesk.channel.instance.Email
       },
     ]
   }
