@@ -1,0 +1,19 @@
+zendesk.webhook Jira___create_Payments_escalation@sbsss {
+  name = "Jira - create Payments escalation"
+  description = "Creates a PAY issue in Jira when Tier 3 Payments escalates a ticket."
+  status = "active"
+  subscriptions = [
+    "conditional_ticket_events",
+  ]
+  endpoint = "https://salto-test-3.atlassian.net/rest/api/3/issue"
+  http_method = "POST"
+  request_format = "json"
+  authentication = {
+    type = "basic_auth"
+    data = {
+      username = "user@name.com"
+    }
+    add_position = "header"
+  }
+  _alias = "Jira - create Payments escalation"
+}

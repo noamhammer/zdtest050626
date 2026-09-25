@@ -1,0 +1,8 @@
+zendesk.group Tier_3___Payments@ssbs {
+  is_public = true
+  name = "Tier 3 - Payments"
+  description = "Tier 3 agents handling payment-failure escalations. Membership managed in Okta (group Tier 3 - Payments)."
+  default = false
+  deleted = false
+  _alias = "Tier 3 - Payments"
+}

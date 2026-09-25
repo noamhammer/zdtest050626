@@ -13,6 +13,7 @@ zendesk.app_installation Time_Tracking_edit_support@sbu {
     debug_prevent_huge_times = false
     name = "Time Tracking-edit"
     title = "Time Tracking-edit"
+    allow_zero_in_follow_up_ticket = false
   }
   enabled = true
   recurring_payment = false

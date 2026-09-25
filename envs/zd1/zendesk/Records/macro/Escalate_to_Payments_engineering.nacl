@@ -1,0 +1,28 @@
+zendesk.macro Escalate_to_Payments_engineering@s {
+  title = "Escalate to Payments engineering"
+  active = true
+  default = false
+  description = "Tier 3 Payments: confirm a bug and open a tracked Jira issue for Payments engineering (via the escalation webhook)."
+  actions = [
+    {
+      field = zendesk.ticket_field.instance.Escalation_Status_tagger@su
+      value = zendesk.ticket_field__custom_field_options.instance.Escalation_Status_tagger__escalated@suuu
+    },
+    {
+      field = "status"
+      value = "pending"
+    },
+    {
+      field = "comment_value_html"
+      value = "<p>Thanks for your patience. We confirmed this is a defect on our side and escalated it to our Payments engineering team. We will update you here as soon as we have news.</p>"
+    },
+  ]
+  restriction = {
+    type = "Group"
+    ids = [
+      zendesk.group.instance.Tier_3___Payments@ssbs,
+    ]
+  }
+  raw_title = "Escalate to Payments engineering"
+  _alias = "Escalate to Payments engineering"
+}

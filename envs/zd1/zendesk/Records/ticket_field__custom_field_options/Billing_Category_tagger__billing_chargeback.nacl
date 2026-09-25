@@ -1,0 +1,9 @@
+zendesk.ticket_field__custom_field_options Billing_Category_tagger__billing_chargeback@suuuu {
+  raw_name = "Chargeback"
+  value = "billing_chargeback"
+  allow_solving = true
+  _parent = [
+    zendesk.ticket_field.instance.Billing_Category_tagger@su,
+  ]
+  _alias = "billing_chargeback"
+}

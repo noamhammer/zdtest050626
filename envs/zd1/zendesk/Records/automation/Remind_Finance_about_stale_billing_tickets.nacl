@@ -1,0 +1,56 @@
+zendesk.automation Remind_Finance_about_stale_billing_tickets@s {
+  title = "Remind Finance about stale billing tickets"
+  active = true
+  default = false
+  actions = [
+    {
+      field = "current_tags"
+      value = [
+        zendesk.tag.instance.finance_reminder_sent,
+      ]
+    },
+    {
+      field = "notification_group"
+      value = [
+        zendesk.group.instance.Finance,
+        "Billing ticket {{ticket.id}} has been waiting 48 hours",
+        '''
+Ticket {{ticket.id}} ({{ticket.title}}) is a billing matter and has been open for 48 hours without a Finance decision. Please review it so it does not fall through.
+
+{{ticket.link}}
+''',
+      ]
+    },
+  ]
+  conditions = {
+    all = [
+      {
+        field = "status"
+        operator = "less_than"
+        value = "solved"
+      },
+      {
+        field = "current_tags"
+        operator = "includes"
+        value = [
+          zendesk.tag.instance.finance_review,
+        ]
+      },
+      {
+        field = "current_tags"
+        operator = "not_includes"
+        value = [
+          zendesk.tag.instance.finance_decided,
+          zendesk.tag.instance.finance_reminder_sent,
+        ]
+      },
+      {
+        field = "NEW"
+        operator = "greater_than"
+        value = "48"
+      },
+    ]
+  }
+  raw_title = "Remind Finance about stale billing tickets"
+  _alias = "Remind Finance about stale billing tickets"
+}

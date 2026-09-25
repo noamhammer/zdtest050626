@@ -1,0 +1,44 @@
+zendesk.trigger Open_Jira_issue_for_Payments_escalation@s {
+  title = "Open Jira issue for Payments escalation"
+  active = true
+  default = false
+  actions = [
+    {
+      field = "notification_webhook"
+      value = [
+        zendesk.webhook.instance.Jira___create_Payments_escalation@sbsss,
+        "{\"fields\":{\"project\":{\"key\":\"PAY\"},\"issuetype\":{\"name\":\"Bug\"},\"summary\":\"[ZD-{{ticket.id}}] {{ticket.title}}\",\"labels\":[\"zendesk\",\"payments\"],\"description\":{\"type\":\"doc\",\"version\":1,\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Escalated by Tier 3 Payments from Zendesk ticket {{ticket.id}}: {{ticket.link}}\"}]}]}}}",
+      ]
+    },
+    {
+      field = "current_tags"
+      value = [
+        zendesk.tag.instance.escalated_to_jira,
+      ]
+    },
+  ]
+  conditions = {
+    all = [
+      {
+        field = "current_tags"
+        operator = "not_includes"
+        value = [
+          zendesk.tag.instance.escalated_to_jira,
+        ]
+      },
+      {
+        field = "group_id"
+        operator = "is"
+        value = zendesk.group.instance.Tier_3___Payments@ssbs
+      },
+      {
+        field = zendesk.ticket_field.instance.Escalation_Status_tagger@su
+        operator = "is"
+        value = zendesk.ticket_field__custom_field_options.instance.Escalation_Status_tagger__escalated@suuu
+      },
+    ]
+  }
+  raw_title = "Open Jira issue for Payments escalation"
+  category_id = zendesk.trigger_category.instance.Notifications
+  _alias = "Open Jira issue for Payments escalation"
+}

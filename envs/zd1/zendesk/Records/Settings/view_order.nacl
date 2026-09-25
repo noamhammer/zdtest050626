@@ -37,6 +37,8 @@ zendesk.view_order {
     zendesk.view.instance.INCIDENT_27300_view@b,
     zendesk.view.instance.EdenTest3,
     zendesk.view.instance.reut_test_view_1@s,
+    zendesk.view.instance.Tier_3___Payments_queue@ssbss,
+    zendesk.view.instance.Finance___Refunds___billing_disputes@sbssess,
   ]
   inactive = [
   ]

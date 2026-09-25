@@ -18,6 +18,7 @@ zendesk.automation_order {
     zendesk.automation.instance.Neta_test_automation_445@s,
     zendesk.automation.instance.LiorAutomation1,
     zendesk.automation.instance.Close_ticket_4_days_after_status_is_set_to_solved@s,
+    zendesk.automation.instance.Remind_Finance_about_stale_billing_tickets@s,
   ]
   inactive = [
   ]

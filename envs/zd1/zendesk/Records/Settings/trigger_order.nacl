@@ -33,6 +33,9 @@ zendesk.trigger_order {
         zendesk.trigger.instance.Routing_NHR_tickets_to_Credit_Management_Group@s,
         zendesk.trigger.instance.Routing__BKR_to_Credit_Management_Group@s,
         zendesk.trigger.instance.HA___trigger___Email___set_Health_status_and_explanation_for_trigger@sbssbssbsssssss,
+        zendesk.trigger.instance.Route_payment_failures_to_Tier_3_Payments@s,
+        zendesk.trigger.instance.Open_Jira_issue_for_Payments_escalation@s,
+        zendesk.trigger.instance.Flag_billing_tickets_for_Finance@s,
       ]
       inactive = [
       ]

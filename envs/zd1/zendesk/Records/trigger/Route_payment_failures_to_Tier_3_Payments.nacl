@@ -1,0 +1,55 @@
+zendesk.trigger Route_payment_failures_to_Tier_3_Payments@s {
+  title = "Route payment failures to Tier 3 Payments"
+  active = true
+  default = false
+  actions = [
+    {
+      field = "group_id"
+      value = zendesk.group.instance.Tier_3___Payments@ssbs
+    },
+    {
+      field = "priority"
+      value = "high"
+    },
+    {
+      field = zendesk.ticket_field.instance.Escalation_Status_tagger@su
+      value = zendesk.ticket_field__custom_field_options.instance.Escalation_Status_tagger__payments@suuu
+    },
+    {
+      field = "notification_group"
+      value = [
+        zendesk.group.instance.Tier_3___Payments@ssbs,
+        "Payment failure {{ticket.id}} routed to Tier 3 Payments",
+        '''
+Ticket {{ticket.id}} ({{ticket.title}}) was tagged as a payment failure and routed to Tier 3 Payments. First reply SLA: 1 hour.
+
+{{ticket.link}}
+''',
+      ]
+    },
+  ]
+  conditions = {
+    all = [
+      {
+        field = "current_tags"
+        operator = "includes"
+        value = [
+          zendesk.tag.instance.payment_failure,
+        ]
+      },
+      {
+        field = "group_id"
+        operator = "is_not"
+        value = zendesk.group.instance.Tier_3___Payments@ssbs
+      },
+      {
+        field = "status"
+        operator = "less_than"
+        value = "solved"
+      },
+    ]
+  }
+  raw_title = "Route payment failures to Tier 3 Payments"
+  category_id = zendesk.trigger_category.instance.Notifications
+  _alias = "Route payment failures to Tier 3 Payments"
+}

@@ -1,0 +1,23 @@
+zendesk.ticket_field Billing_Category_tagger@su {
+  type = "tagger"
+  raw_title = "Billing Category"
+  raw_description = "Set when a ticket is a billing matter. Finance is notified and can follow the ticket read-only."
+  active = true
+  required = false
+  collapsed_for_agents = false
+  raw_title_in_portal = "Billing Category"
+  visible_in_portal = false
+  editable_in_portal = false
+  required_in_portal = false
+  agent_can_edit = true
+  removable = true
+  agent_description = "Refund requests, invoice disputes and chargebacks. Setting this field tags the ticket for Finance review."
+  raw_agent_description = "Refund requests, invoice disputes and chargebacks. Setting this field tags the ticket for Finance review."
+  custom_field_options = [
+    zendesk.ticket_field__custom_field_options.instance.Billing_Category_tagger__billing_refund@suuuu,
+    zendesk.ticket_field__custom_field_options.instance.Billing_Category_tagger__billing_invoice_dispute@suuuuu,
+    zendesk.ticket_field__custom_field_options.instance.Billing_Category_tagger__billing_chargeback@suuuu,
+    zendesk.ticket_field__custom_field_options.instance.Billing_Category_tagger__billing_other@suuuu,
+  ]
+  _alias = "Billing Category"
+}

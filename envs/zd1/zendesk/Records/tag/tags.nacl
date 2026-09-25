@@ -134,3 +134,23 @@ zendesk.tag email_risk {
   id = "email_risk"
   _alias = "email_risk"
 }
+zendesk.tag escalated_to_jira {
+  id = "escalated_to_jira"
+  _alias = "escalated_to_jira"
+}
+zendesk.tag finance_decided {
+  id = "finance_decided"
+  _alias = "finance_decided"
+}
+zendesk.tag finance_reminder_sent {
+  id = "finance_reminder_sent"
+  _alias = "finance_reminder_sent"
+}
+zendesk.tag finance_review {
+  id = "finance_review"
+  _alias = "finance_review"
+}
+zendesk.tag payment_failure {
+  id = "payment_failure"
+  _alias = "payment_failure"
+}

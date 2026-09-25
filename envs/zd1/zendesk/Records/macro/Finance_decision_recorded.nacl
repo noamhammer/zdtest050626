@@ -1,0 +1,24 @@
+zendesk.macro Finance_decision_recorded@s {
+  title = "Finance decision recorded"
+  active = true
+  default = false
+  description = "Support applies this after Finance leaves its internal note, so the ticket leaves the Finance list and goes back to the agent."
+  actions = [
+    {
+      field = "current_tags"
+      value = [
+        zendesk.tag.instance.finance_decided,
+      ]
+    },
+    {
+      field = "status"
+      value = "open"
+    },
+    {
+      field = "comment_value_html"
+      value = "<p>Finance has reviewed this billing request and recorded a decision in the internal notes above. Support: please communicate the outcome to the customer and close the loop.</p>"
+    },
+  ]
+  raw_title = "Finance decision recorded"
+  _alias = "Finance decision recorded"
+}

@@ -1,0 +1,51 @@
+zendesk.trigger Flag_billing_tickets_for_Finance@s {
+  title = "Flag billing tickets for Finance"
+  active = true
+  default = false
+  actions = [
+    {
+      field = "current_tags"
+      value = [
+        zendesk.tag.instance.finance_review,
+      ]
+    },
+    {
+      field = "notification_group"
+      value = [
+        zendesk.group.instance.Finance,
+        "Billing ticket {{ticket.id}} needs Finance attention",
+        '''
+Support marked ticket {{ticket.id}} ({{ticket.title}}) as a billing matter: {{ticket.ticket_field_option_title_billing_category}}.
+
+You can follow it read-only in the view 'Finance - Refunds & billing disputes'.
+
+{{ticket.link}}
+''',
+      ]
+    },
+  ]
+  conditions = {
+    all = [
+      {
+        field = "current_tags"
+        operator = "not_includes"
+        value = [
+          zendesk.tag.instance.finance_review,
+        ]
+      },
+      {
+        field = "status"
+        operator = "less_than"
+        value = "solved"
+      },
+      {
+        field = zendesk.ticket_field.instance.Billing_Category_tagger@su
+        operator = "present"
+        value = ""
+      },
+    ]
+  }
+  raw_title = "Flag billing tickets for Finance"
+  category_id = zendesk.trigger_category.instance.Notifications
+  _alias = "Flag billing tickets for Finance"
+}

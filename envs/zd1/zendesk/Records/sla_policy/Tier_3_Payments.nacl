@@ -1,0 +1,37 @@
+zendesk.sla_policy Tier_3_Payments@s {
+  title = "Tier 3 Payments"
+  description = "One-hour first reply for payment-failure tickets handled by Tier 3 Payments."
+  filter = {
+    all = [
+      {
+        field = "group_id"
+        operator = "is"
+        value = zendesk.group.instance.Tier_3___Payments@ssbs
+      },
+    ]
+  }
+  policy_metrics = [
+    {
+      priority = "high"
+      metric = "first_reply_time"
+      target = 60
+      business_hours = true
+      target_in_seconds = 3600
+    },
+    {
+      priority = "high"
+      metric = "next_reply_time"
+      target = 240
+      business_hours = true
+      target_in_seconds = 14400
+    },
+    {
+      priority = "urgent"
+      metric = "first_reply_time"
+      target = 30
+      business_hours = false
+      target_in_seconds = 1800
+    },
+  ]
+  _alias = "Tier 3 Payments"
+}

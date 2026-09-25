@@ -1,0 +1,9 @@
+zendesk.ticket_field__custom_field_options Billing_Category_tagger__billing_invoice_dispute@suuuuu {
+  raw_name = "Invoice dispute"
+  value = "billing_invoice_dispute"
+  allow_solving = true
+  _parent = [
+    zendesk.ticket_field.instance.Billing_Category_tagger@su,
+  ]
+  _alias = "billing_invoice_dispute"
+}
