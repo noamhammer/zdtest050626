@@ -12,13 +12,6 @@ zendesk.sla_policy Tier_3_Payments@s {
   }
   policy_metrics = [
     {
-      priority = "urgent"
-      metric = "first_reply_time"
-      target = 30
-      business_hours = false
-      target_in_seconds = 1800
-    },
-    {
       priority = "high"
       metric = "first_reply_time"
       target = 60
@@ -31,6 +24,13 @@ zendesk.sla_policy Tier_3_Payments@s {
       target = 240
       business_hours = true
       target_in_seconds = 14400
+    },
+    {
+      priority = "urgent"
+      metric = "first_reply_time"
+      target = 30
+      business_hours = false
+      target_in_seconds = 1800
     },
   ]
   _alias = "Tier 3 Payments"

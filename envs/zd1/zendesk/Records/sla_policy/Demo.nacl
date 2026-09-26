@@ -16,13 +16,6 @@ zendesk.sla_policy Demo {
   }
   policy_metrics = [
     {
-      priority = "high"
-      metric = "first_reply_time"
-      target = 60
-      business_hours = false
-      target_in_seconds = 3600
-    },
-    {
       priority = "low"
       metric = "first_reply_time"
       target = 60
@@ -34,6 +27,13 @@ zendesk.sla_policy Demo {
       metric = "first_reply_time"
       target = 60
       business_hours = true
+      target_in_seconds = 3600
+    },
+    {
+      priority = "high"
+      metric = "first_reply_time"
+      target = 60
+      business_hours = false
       target_in_seconds = 3600
     },
     {
