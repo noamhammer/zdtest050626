@@ -11,14 +11,14 @@ zendesk.sla_policy new_for_audit@s {
   }
   policy_metrics = [
     {
-      priority = "high"
+      priority = "urgent"
       metric = "first_reply_time"
       target = 60
       business_hours = false
       target_in_seconds = 3600
     },
     {
-      priority = "urgent"
+      priority = "high"
       metric = "first_reply_time"
       target = 60
       business_hours = false
