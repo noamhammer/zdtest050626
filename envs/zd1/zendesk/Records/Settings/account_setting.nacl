@@ -1,8 +1,8 @@
 zendesk.account_setting {
   branding = {
-    header_color = "690801"
+    header_color = "03363D"
     page_background_color = "333333"
-    tab_background_color = "57110C"
+    tab_background_color = "7FA239"
     text_color = "FFFFFF"
   }
   apps = {
@@ -33,7 +33,7 @@ zendesk.account_setting {
     assign_default_organization = true
     messaging_transcript_public = true
     app_shortcuts_context_panel_enabled = true
-    auto_translation_enabled = true
+    auto_translation_enabled = false
     agent_invitation_enabled = true
     chat_sla_enablement = false
     modern_ticket_reassignment = false
@@ -45,15 +45,14 @@ zendesk.account_setting {
     agent_can_change_requester = true
     comment_email_ccs_allowed = true
     ticket_followers_allowed = true
-    ticket_auto_tagging = true
+    ticket_auto_tagging = false
     end_user_attachments = true
-    audio_recorder_enabled = true
     copy_original_assignee_and_group_to_followup = false
     ccs_requester_excluded_public_comments = false
     bcc_archive_address = ""
     suspended_ticket_notification = {
-      frequency = 1440
-      email_list = "pablo.gonzalez@salto.io"
+      frequency = 0
+      email_list = ""
     }
     light_agent_email_ccs_allowed = false
     agent_email_ccs_become_followers = true
@@ -81,25 +80,23 @@ zendesk.account_setting {
     lockdown_enabled = false
     email_comments_public = true
     render_custom_uri_hyperlinks = ""
-    ticket_id_sequence = "1462940"
+    ticket_id_sequence = "18"
     follower_subject_template = "{{ticket.title}}"
     follower_email_template = '''
 You are a follower on this request ({{ticket.id}}). {{ticket.follower_reply_type_message}}
 
-{{ticket.comments_formatted}}
+{{ticket.latest_comment_html}}
 '''
     ticket_email_ccs_suspension_threshold = 48
     messaging_enabled = true
     ccs_followers_rules_update_required = true
     ccs_followers_no_rollback = true
-    email_ccs_addable_only_by_agents_via_email = false
     sunco_private_attachments_enabled = false
     only_allowed_attachment_file_types = "all"
     only_allowed_attachment_file_types_agreement = "unset"
     attachment_public_expiration = false
     attachment_public_duration = 24
     private_end_user_attachments = false
-    email_redact_attachments_when_placeholders_disallow = false
   }
   agents = {
     agent_workspace = true
@@ -110,30 +107,29 @@ You are a follower on this request ({{ticket.id}}). {{ticket.follower_reply_type
     agent_as_a_requester = "private-groups"
     spell_checker_enabled = true
     idle_timeout_enabled = false
-    agent_home = false
+    agent_home = true
+    split_view_enabled = false
+    split_view_tos_accepted = false
     dark_mode_agent_workspace = true
     dark_mode_terms_and_conditions_accepted = false
     unified_navigation_enabled = false
     unified_navigation_terms_and_conditions_accepted = false
     ai_async_comment_translations_eap_enabled = false
     ai_translation_disclosure_enabled = false
-    explore_zra_monitoring_assistant_enabled = true
     example_eap_tos_accepted = false
     example_eap_enabled = false
     explore_zra_monitoring_assistant_eap_tos_accepted = false
     explore_zra_monitoring_assistant_eap_enabled = false
     it_asset_management_eap_tos_accepted = false
     it_asset_management_eap_enabled = false
+    zra_wfm_adherence_eap_tos_accepted = false
+    zra_wfm_adherence_eap_enabled = false
     iap_mcp_connections_home_eap_tos_accepted = false
     iap_mcp_connections_home_eap_enabled = false
     voice_ai_agents_eap_tos_accepted = false
     voice_ai_agents_eap_enabled = false
     hyperarc_eap_tos_accepted = false
     hyperarc_eap_enabled = false
-    hyperarc_cohort1_eap_tos_accepted = false
-    hyperarc_cohort1_eap_enabled = false
-    hyperarc_cohort2_eap_tos_accepted = false
-    hyperarc_cohort2_eap_enabled = false
     zqa_quality_score_eap_tos_accepted = false
     zqa_quality_score_eap_enabled = false
     messaging_end_user_presence_eap_tos_accepted = false
@@ -148,36 +144,20 @@ You are a follower on this request ({{ticket.id}}). {{ticket.follower_reply_type
     knowledge_copilot_eap_enabled = false
     zra_ai_agent_eap_tos_accepted = false
     zra_ai_agent_eap_enabled = false
+    cov2_parent_child_rollup_eap_tos_accepted = false
+    cov2_parent_child_rollup_eap_enabled = false
+    cov2_ticket_multi_lookup_eap_tos_accepted = false
+    cov2_ticket_multi_lookup_eap_enabled = false
     pdf_ingestion_eap_tos_accepted = false
     pdf_ingestion_eap_enabled = false
     contentful_eap_tos_accepted = false
     contentful_eap_enabled = false
     approvals_hitl_sequential_eap_tos_accepted = false
     approvals_hitl_sequential_eap_enabled = false
-    split_view_eap_tos_accepted = false
-    split_view_eap_enabled = false
     suggested_assignees_eap_tos_accepted = false
     suggested_assignees_eap_enabled = false
-    lisbon_theme_eap_tos_accepted = false
-    lisbon_theme_eap_enabled = false
-    ai_agents_autoserve_eap_tos_accepted = false
-    ai_agents_autoserve_eap_enabled = false
-    iap_admin_copilot_action_flows_eap_tos_accepted = false
-    iap_admin_copilot_action_flows_eap_enabled = false
-    apps_mtls_eap_tos_accepted = false
-    apps_mtls_eap_enabled = false
-    advanced_action_flows_eap_tos_accepted = false
-    advanced_action_flows_eap_enabled = false
-    headless_platform_mcp_eap_tos_accepted = false
-    headless_platform_mcp_eap_enabled = false
-    ai_agents_conversation_simulator_eap_tos_accepted = false
-    ai_agents_conversation_simulator_eap_enabled = false
-    bi_directional_slack_eap_tos_accepted = false
-    bi_directional_slack_eap_enabled = false
-    contact_center_realtime_translation_eap_tos_accepted = false
-    contact_center_realtime_translation_eap_enabled = false
-    es_change_management_eap_tos_accepted = false
-    es_change_management_eap_enabled = false
+    email_msar_eap_tos_accepted = false
+    email_msar_eap_enabled = false
   }
   groups = {
     check_group_name_uniqueness = true
@@ -201,7 +181,6 @@ You are a follower on this request ({{ticket.id}}). {{ticket.follower_reply_type
     ctm_goals_migration_status = 0
     ctm_chat_routing_migration_status = 0
     ctm_pre_chat_group_routing_status = 0
-    ctm_offline_ticket_config_status = 0
     ctm_device_metadata_migration_status = 0
     ctm_reporting_migration_status = 0
     ctm_chat_api_migration_status = 0
@@ -241,18 +220,18 @@ You are a follower on this request ({{ticket.id}}). {{ticket.follower_reply_type
     tagging = true
     time_zone_selection = true
     language_selection = true
-    multiple_organizations = true
-    agent_created_welcome_emails = false
+    multiple_organizations = false
+    agent_created_welcome_emails = true
     end_user_phone_number_validation = false
     have_gravatars_enabled = true
-    shared_email_creation_enabled = false
   }
   screencast = {
     enabled_for_tickets = false
   }
   lotus = {
     prefer_lotus = true
-    pod_id = 19
+    reporting = true
+    pod_id = 27
   }
   statistics = {
     forum = false
@@ -279,8 +258,8 @@ You are a follower on this request ({{ticket.id}}). {{ticket.follower_reply_type
     customer_satisfaction = true
     customer_satisfaction_survey = false
     satisfaction_prediction = false
-    automatic_answers = true
-    csat_reason_code = true
+    automatic_answers = false
+    csat_reason_code = false
     screencasts = false
     markdown = false
     bcc_archiving = false
@@ -296,11 +275,11 @@ You are a follower on this request ({{ticket.id}}). {{ticket.follower_reply_type
     explore_forbidden = false
     explore_not_set = false
     sandbox = true
-    suspended_ticket_notification = true
-    twitter = true
+    suspended_ticket_notification = false
+    twitter = false
     facebook = false
-    dynamic_contents = true
-    light_agents = true
+    dynamic_contents = false
+    light_agents = false
     ticket_forms = true
     user_org_fields = true
     is_abusive = false
@@ -320,14 +299,8 @@ You are a follower on this request ({{ticket.id}}). {{ticket.follower_reply_type
     approvers_as_end_users = false
   }
   ticket_form = {
-    ticket_forms_instructions = '''
-Please choose your issue below
-(edited) 
-'''
-    raw_ticket_forms_instructions = '''
-Please choose your issue below
-(edited) 
-'''
+    ticket_forms_instructions = "Please choose your issue below"
+    raw_ticket_forms_instructions = "Please choose your issue below"
   }
   brands = {
     default_brand_id = zendesk.brand.instance.Salto
@@ -344,16 +317,12 @@ Please choose your issue below
   }
   rule = {
     macro_most_used = true
-    macro_order = "position"
+    macro_order = "alphabetical"
     using_skill_based_routing = true
     enable_macro_suggestions = false
   }
   limits = {
     attachment_size = 52428800
-    multi_lookup_fields = 2
-    max_users_per_shared_identity = {
-      email = 100
-    }
   }
   onboarding = {
     checklist_onboarding_version = 6
@@ -377,8 +346,8 @@ Please choose your issue below
     account_size = "1-99"
   }
   localization = {
-    time_zone = "American Samoa"
-    iana_time_zone = "Pacific/Pago_Pago"
+    time_zone = "International Date Line West"
+    iana_time_zone = "Etc/GMT+12"
     default_locale_identifier = "en-US"
     uses_12_hour_clock = false
   }
@@ -392,41 +361,42 @@ Please choose your issue below
     search_community_posts = true
     search_external_content = true
     require_article_templates = false
-    generative_answers = false
+    generative_answers = true
   }
   routing = {
     enabled = true
-    autorouting_tag = "audit"
+    autorouting_tag = "email_routed_to_support"
     max_email_capacity = 1
     max_messaging_capacity = 1
-    reassignment_messaging_enabled = false
-    reassignment_messaging_timeout = 15
+    reassignment_messaging_enabled = true
+    reassignment_messaging_timeout = 30
     reassignment_talk_timeout = 30
     skills_enabled = true
     skills_timeout_enabled = false
     skills_timeout_support = 3600
     skills_timeout_messaging = 30
     skills_timeout_talk = 30
-    reassignment_reopened_tickets_enabled = false
+    reassignment_reopened_tickets_enabled = true
     reassignment_reopened_tickets_support_enabled = false
-    reassignment_reopened_tickets_messaging_enabled = false
+    reassignment_reopened_tickets_messaging_enabled = true
+    reassignment_reopened_tickets_support_statuses = [
+      3,
+    ]
+    reassignment_reopened_tickets_messaging_statuses = [
+      4,
+    ]
     reassignment_agent_status_change_enabled = false
     reassignment_agent_status_change_support_enabled = false
     reassignment_agent_status_change_messaging_enabled = false
-    reassignment_through_queues_enabled = false
-    messaging_activity_routing_enabled = true
+    reassignment_through_queues_enabled = true
+    messaging_activity_routing_enabled = false
     auto_activation = 0
-    auto_open_email_enabled = false
+    auto_open_email_enabled = true
     auto_accept_messaging_enabled = false
     focus_mode_enabled = false
     assignment_method = "highest_spare_capacity"
     ticket_sorting_prioritize_sla = false
     transform_to_email_enabled = false
-  }
-  realtime_insights = {
-    enabled = false
-    anomaly_detection = false
-    trending_topics_summary = false
   }
   deletion = {
     user_auto_delete_soft_deleted_retention = 30
@@ -435,7 +405,7 @@ Please choose your issue below
     user_auto_delete_account_prioritisation = 1
   }
   messaging_inactivity = {
-    timeout = 10
+    timeout = 5
     enabled = false
     end_session = false
     default_localized_messages = {
@@ -446,8 +416,8 @@ Please choose your issue below
   }
   device_metadata = {
     enabled = true
-    hide_ip = false
-    hide_location = false
+    hide_ip = true
+    hide_location = true
   }
   messaging = {
     messaging_end_session = false
@@ -466,15 +436,6 @@ Please choose your issue below
     enabled = false
     oauth_auth_enabled = false
   }
-  saas_management_enabled = false
-  has_org_hierarchy = false
-  org_hierarchy_enabled = false
-  surveys = {
-    theming_integration_enabled = false
-  }
-  qa = {
-    quality_score_opted_out = false
-  }
   email = {
     accept_wildcard_emails = false
     custom_dkim_domain = false
@@ -484,10 +445,9 @@ Please choose your issue below
     email_template_photos = true
     email_template_selection = false
     gmail_actions = true
-    gmail_fallback_enabled = true
     html_mail_template = '''
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html>
+<!DOCTYPE html>
+<html dir="auto">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <style type="text/css">
@@ -498,12 +458,13 @@ Please choose your issue below
   </style>
 </head>
 <body {{attributes}} style="width: 100%!important; margin: 0; padding: 0;">
-  <div style="padding: 10px; line-height: 1.5; font-family: 'Lucida Grande',Verdana,Arial,sans-serif; font-size: 12px; color:#444444;">
+  <div style="font-family: 'system-ui','-apple-system','BlinkMacSystemFont','Segoe UI','Roboto','Oxygen-Sans','Ubuntu','Cantarell','Helvetica Neue','Arial','sans-serif'; font-size: 14px; line-height: 1.5; color:#444444;">
     {{content}}
-  </div>
-  <div style="padding: 10px; line-height: 1.5; font-family: 'Lucida Grande',Verdana,Arial,sans-serif; font-size: 12px; color: #aaaaaa; margin: 10px 0 14px 0; padding-top: 10px; border-top: 1px solid #eeeeee;">
+  </div><br/>
+  <div style="font-family: 'system-ui','-apple-system','BlinkMacSystemFont','Segoe UI','Roboto','Oxygen-Sans','Ubuntu','Cantarell','Helvetica Neue','Arial','sans-serif'; font-size: 12px; line-height: 1.5; color: #aaaaaa; margin: 10px 0 14px 0; padding-top: 10px;">
     {{footer}} {{footer_link}}
-  </div>
+  </div><br/>
+  {{quoted_content}}
 </body>
 </html>
 
@@ -518,24 +479,18 @@ Please choose your issue below
 {{content}}
 
 {{footer}}
+
+{{quoted_content}}
 '''
-    multi_recipient_email_tickets = false
-    email_voice_ai_agent_comments = true
-  }
-  automatic_answers = {
-    threshold = "balanced"
   }
   side_conversations = {
-    email_channel = true
+    email_channel = false
     msteams_channel = false
-    slack_channel = true
-    tickets_channel = true
+    slack_channel = false
+    tickets_channel = false
     show_in_context_panel = true
   }
   approvals = {
     slack_workspace = ""
-  }
-  notifications = {
-    notifications_preference_admin_setting = false
   }
 }
